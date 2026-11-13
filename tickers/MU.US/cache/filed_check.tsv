@@ -1,0 +1,6 @@
+form	period_end	measure	filed	eodhd	gap_pct	deviation	concept	currency	note
+10-K	2026-09-03	revenue	1.33188e+11	1.33188e+11	0	no	RevenueFromContractWithCustomerExcludingAssessedTax	usd	
+10-K	2026-09-03	operating_income	9.934e+10	9.934e+10	0	no	OperatingIncomeLoss	usd	
+10-K	2026-09-03	operating_cash_flow	8.9675e+10	8.9675e+10	0	no	NetCashProvidedByUsedInOperatingActivities	usd	
+10-K	2026-09-03	diluted_shares	1.143e+09			n/a	WeightedAverageNumberOfDilutedSharesOutstanding	shares	compared with diluted and basic weighted counts
+10-K	2026-09-03	net_debt	-4.0642e+10	-4.0642e+10	0	no	LongTermDebt - CashAndCashEquivalentsAtCarryingValue - short-term investments		filed figure excludes leases

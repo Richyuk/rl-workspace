@@ -1,0 +1,144 @@
+{
+ "schema_version": "1.0",
+ "key": "MU.US",
+ "run_id": "2026-11-07-semis",
+ "version": 1,
+ "created_london": "2026-11-07T15:30:42+00:00",
+ "claims": [
+  {
+   "id": "C1",
+   "role": "core",
+   "type": "base_rate_deviation",
+   "statement": "Micron's mature operating margin is at least 27.645%, the median of its own annual operating margins over FY2017-FY2026. The code's Track B base case instead fades the margin over ten years to 17.98%, the Semiconductors & Semiconductor Equipment median. The own median already includes the FY2023 trough (-36.97%) as well as the FY2026 spike (74.59%). The case for a higher floor than in past cycles rests on contracts that are new this year. The take-or-pay strategic customer agreements carry minimum and maximum price bands. Remaining performance obligations were about $134bn at 3 Sep 2026, measured at committed volumes and minimum pricing (10-K Note 8 revenue disclosure). About one-fourth is due within twelve months and all within five years, secured by $12.75bn of customer deposits and $7bn of letters of credit. The 10-K says gross margins under these agreements, even at floor prices, should be meaningfully above peak quarterly margins in any past cycle; the best past annual gross margin was 58.87% (FY2018). Against the claim, a secondary source estimates the agreements at over 35% of revenue through 2030, so most revenue still follows market prices, and revenue fell in 7 of the last 19 years. Override: margin_target 0.27645. Test: TTM operating margin of at least 50% at every quarter-end through the August 2028 quarter (FY2028). That is above every annual margin before FY2026 (peak 49.34% in FY2018); the code's own path is 68.93% in year 1 and 63.27% in year 2.",
+   "metric": "Trailing-12-month operating margin",
+   "metric_ref": "facts:derived.ttm.operating_margin",
+   "current_value": 74.586,
+   "unit": "%",
+   "test": {
+    "operator": ">=",
+    "threshold": 50.0,
+    "period": "each quarter-end to the August 2028 quarter (FY2028)"
+   },
+   "kill": {
+    "operator": "<",
+    "threshold": 46.28,
+    "consecutive_periods": 2,
+    "description": "TTM operating margin below 46.28% at two consecutive quarter-ends before the review. That is the code's own year-5 base margin reached within two years and below the FY2018 peak of 49.34%: margins fading more than twice as fast as the code's path, so the price-band contracts did not change the cycle."
+   },
+   "review_by": "2028-10-31",
+   "sources": [
+    "facts:derived.ttm.operating_margin",
+    "facts:valuation.inputs.own_margins_10y",
+    "facts:valuation.inputs.industry_mature_margin",
+    "facts:valuation.cases.base.margin_target",
+    "facts:valuation.cases.base.margin_years",
+    "facts:valuation.cases.base.path.0.margin",
+    "facts:valuation.cases.base.path.1.margin",
+    "facts:valuation.cases.base.path.4.margin",
+    "facts:financials_annual.2018-08-31.operating_margin",
+    "facts:financials_annual.2018-08-31.gross_margin",
+    "facts:financials_annual.2023-08-31.operating_margin",
+    "calc:({valuation.inputs.own_margins_10y.8}+{valuation.inputs.own_margins_10y.0})/2",
+    "tickers/MU.US/cache/sections/0000723125-26-000023_1.txt",
+    "tickers/MU.US/cache/sections/0000723125-26-000023_7.txt",
+    "tickers/MU.US/cache/sections/0000723125-26-000023_8.txt",
+    "dossier:business.cyclicality",
+    "dossier:expectations.reading",
+    "dossier:expectations.case_comments"
+   ],
+   "override": {
+    "margin_target": 0.27645
+   }
+  },
+  {
+   "id": "C2",
+   "role": "supporting",
+   "type": "risk_rebuttal",
+   "statement": "Dossier red flag 0 says earnings and margins are at a shortage peak and price-driven: a 74.59% FY2026 operating margin against a ten-year range of -36.97% to 74.59%. The answer is that FY2026 is not the earnings peak. TTM operating income stays at or above the FY2026 figure of $99.34bn at every quarter-end through the August 2028 quarter. The August 2026 quarter alone earned $43.75bn of operating income on $54.23bn of revenue. The company guided $61.5bn of revenue for the November 2026 quarter (CNBC report of the 30 Sep 2026 release), and in that quarter the November 2025 quarter's $6.14bn drops out of the trailing sum. Consensus revenue is $275.5bn for FY2027 and $319.7bn for FY2028. About one-fourth of the $134bn of remaining performance obligations, measured at minimum pricing, falls in the next twelve months. The test therefore bites in FY2028, when Micron's own Idaho fab (first wafers mid-2027), CXMT and Samsung add supply.",
+   "metric": "Trailing-12-month operating income",
+   "metric_ref": "facts:derived.ttm.operating_income",
+   "current_value": 99.34,
+   "unit": "USD bn",
+   "test": {
+    "operator": ">=",
+    "threshold": 99.34,
+    "period": "each quarter-end to the August 2028 quarter (FY2028)"
+   },
+   "kill": {
+    "operator": "<",
+    "threshold": 85.0,
+    "consecutive_periods": 2,
+    "description": "TTM operating income below $85bn at two consecutive quarter-ends. Quarterly operating income would then be averaging under about $21bn against $43.75bn in the August 2026 quarter: a cyclical fall the contracts did not stop, so FY2026 was the peak."
+   },
+   "review_by": "2028-10-31",
+   "sources": [
+    "dossier:red_flags.0",
+    "facts:derived.ttm.operating_income",
+    "facts:financials_quarterly.2026-08-31.operating_income",
+    "facts:financials_quarterly.2026-08-31.revenue",
+    "facts:financials_quarterly.2025-11-30.operating_income",
+    "facts:estimates.trend.2026-11-30.revenueEstimateAvg",
+    "facts:estimates.trend.2027-08-31.revenueEstimateAvg",
+    "facts:estimates.trend.2028-08-31.revenueEstimateAvg",
+    "tickers/MU.US/cache/sections/0000723125-26-000023_7.txt",
+    "tickers/MU.US/cache/sections/0000723125-26-000023_8.txt",
+    "https://www.cnbc.com/2026/09/30/micron-mu-q4-earnings-report-2026.html",
+    "dossier:expectations.what_would_change_it"
+   ],
+   "share_of_gap": 0.05
+  },
+  {
+   "id": "C3",
+   "role": "supporting",
+   "type": "capital_allocation",
+   "statement": "The code's base case charges reinvestment at a sales-to-capital ratio of 0.852 on revenue growth that is mostly price. Its free cash flow to the firm, $26.49bn in year 1 and $26.76bn in year 2, is therefore far below what the business will produce. TTM operating cash flow less capex stays at or above $52.99bn, twice the code's year-1 figure, at every quarter-end through the August 2028 quarter. In FY2026 Micron added $95.81bn of revenue on $30.71bn of capex and produced $58.96bn of operating cash flow less capex. For year 1's added revenue the code charges $85.79bn of reinvestment. Against the claim: capex is guided at about $25bn, net of incentives, in the first half of FY2027 and higher in the second half. FY2026 cash taxes of $1.25bn ran far below the $14.76bn provision and will catch up. Receivables rose $25.2bn in the year.",
+   "metric": "TTM operating cash flow less TTM capex",
+   "metric_ref": "calc:{derived.ttm.ocf}-{derived.ttm.capex}",
+   "current_value": 58.963,
+   "unit": "USD bn",
+   "test": {
+    "operator": ">=",
+    "threshold": 52.99,
+    "period": "each quarter-end to the August 2028 quarter (FY2028)"
+   },
+   "kill": {
+    "operator": "<",
+    "threshold": 26.49,
+    "consecutive_periods": 2,
+    "description": "TTM operating cash flow less capex below $26.49bn, the code's own year-1 free cash flow to the firm, at two consecutive quarter-ends. The code's reinvestment charge would then be right, and the extra value the Analyst's case comments describe would not exist."
+   },
+   "review_by": "2028-10-31",
+   "sources": [
+    "facts:derived.ttm.ocf",
+    "facts:derived.ttm.capex",
+    "facts:derived.ttm.revenue",
+    "facts:financials_annual.2025-08-31.revenue",
+    "facts:valuation.inputs.sales_to_capital",
+    "facts:valuation.cases.base.path.0.fcff",
+    "facts:valuation.cases.base.path.1.fcff",
+    "calc:({valuation.cases.base.path.0.revenue}-{valuation.inputs.revenue_ttm})/{valuation.inputs.sales_to_capital}",
+    "dossier:expectations.case_comments",
+    "dossier:financial_quality.earnings_quality",
+    "tickers/MU.US/cache/sections/0000723125-26-000023_7.txt",
+    "tickers/MU.US/cache/sections/0000723125-26-000023_8.txt"
+   ],
+   "share_of_gap": 0.15
+  }
+ ],
+ "macro_conditions": [
+  {
+   "id": "M1",
+   "series": "US10Y",
+   "operator": "<",
+   "threshold": 5.5,
+   "rationale": "The code's discount rate is the US 10-year yield (4.867% today) plus 4.5%, and the DCF cap on the exit multiple, which sets the base case's 4.54x exit, comes from it. A yield above 5.5% would raise the discount rate by more than 60 basis points and cut the value of the margins C1 says will last."
+  },
+  {
+   "id": "M2",
+   "series": "CMDI_IG",
+   "operator": "<",
+   "threshold": 0.5,
+   "rationale": "About 60% of FY2026 revenue was data centre, and the take-or-pay volumes behind C1 and C2 depend on hyperscale customers funding their AI data-centre builds; the 10-K added data-centre build-out delays as a risk factor. CMDI_IG (0.25 today) above 0.5 would mean investment-grade corporate credit is impaired, which threatens that funding and the customers' purchase commitments."
+  }
+ ]
+}

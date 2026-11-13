@@ -1,0 +1,10 @@
+{
+ "trim_percentile": 0.4,
+ "trim_return": -0.1016,
+ "median_return": -0.0468,
+ "scored": 3148,
+ "valued": 3086,
+ "cache_as_of": "2026-11-07",
+ "valuation_version": "1.4",
+ "run": "2026-11-07-semis"
+}

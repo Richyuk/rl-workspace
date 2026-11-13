@@ -1,0 +1,29 @@
+# Sector programme run 4, copied from templates/run.standard.yaml on 6 Nov 2026. Changed:
+# run_id and deep_dive_cap (12, the top of the standard 8 to 12, so the run stays standard and
+# counts for calibration). The whole Semiconductors & Hardware sector (sectors.yaml 2.0:
+# Information Technology less Software & Services) across all seven regions. First run on
+# valuation 1.4 (1.3's pool trim line and latest close; 1.4's shortlist gate on the
+# industry-exit return with slots ranked live, #168: 12 deep dives on the 6 Nov cache, 7 of
+# them clearing on the live return) and the Collector's 20-F path (ASML, TSMC and the other
+# foreign filers). If #168 is not applied before the run, the run is on 1.3 with 7 deep dives. Start on Saturday 7 Nov after the morning check of the 6 Nov
+# 22:30 refresh, the first on #162 to #164 and EODHD's corrections.
+run_id: 2026-11-07-semis
+mode: sector            # universe | sector | stock | review | manual
+sector: "Semiconductors & Hardware"     # a sector or theme in scoring-rubric config/sectors.yaml (2.0)
+scope_note: "whole sector, no sub-sector first"
+scope_file: null        # null: the Sector Mapper's map/scope.tsv when it exists, else the GICS default
+universe:
+  regions: [US, EU, UK, KR, TW, AU, CA]  # ii-dealable lines only; Japan excluded: EODHD has no Tokyo exchange
+  min_market_cap_usd: 1_000_000_000
+  min_adv_usd: 5_000_000
+tracks: [A, B]
+deep_dive_cap: 12       # 8 to 12 in standard runs; above 15 only in manual runs, flagged
+rubric_version: "2.1.2"
+sector_module: auto     # financials | biotech | commodities | none
+estimate_revisions: true   # 5% weight
+models:
+  red_team: alternate   # different model or effort from the Thesis Builder
+holdings_file: portfolio/holdings_by_account.tsv   # allocator session only
+budget_usd: 120   # raised from 100 on 7 Nov 2026 12:24 London: $24.74 spent after the Collector stage, and 12 names at $6.34 each for the Analyst, Thesis, Red Team and Judge stages (mean of the 2, 4 and 6 Nov runs) projected $101
+as_of: clock            # read from the system clock, Europe/London
+judge_prep: keep

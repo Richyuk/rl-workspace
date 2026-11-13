@@ -1,0 +1,175 @@
+{
+ "key": "MU.US",
+ "config_version": "1.1",
+ "pass_total": 70,
+ "return_hurdle_5y": 0.12,
+ "total": 61.65,
+ "dimensions": {
+  "quality": 100.0,
+  "growth": 87.0,
+  "moat": 35.0,
+  "management": 70.0,
+  "valuation": 0.0
+ },
+ "detail": {
+  "quality": {
+   "points": 100.0,
+   "parts": [
+    {
+     "metric": "gross_margin",
+     "value": 0.80716,
+     "points": 100,
+     "source": "facts:derived.ttm.gross_margin"
+    },
+    {
+     "metric": "operating_margin",
+     "value": 0.74586,
+     "points": 100,
+     "source": "facts:derived.ttm.operating_margin"
+    },
+    {
+     "metric": "fcf_margin",
+     "value": 0.40474,
+     "points": 100,
+     "source": "facts:derived.ttm.fcf_margin"
+    },
+    {
+     "metric": "roic",
+     "value": 1.1054,
+     "points": 100,
+     "source": "facts:screen.scores.roic"
+    }
+   ],
+   "red_flags": [],
+   "adjustment": 0
+  },
+  "growth": {
+   "points": 87.0,
+   "parts": [
+    {
+     "metric": "revenue_cagr_3y",
+     "value": 1.0465,
+     "points": 100,
+     "weight": 0.5,
+     "source": "facts:screen.scores.revenue_cagr_3y"
+    },
+    {
+     "metric": "revenue_growth_latest_q",
+     "value": 3.79266,
+     "points": 100,
+     "weight": 0.3,
+     "source": "facts:derived.revenue_growth_yoy_latest"
+    },
+    {
+     "metric": "dilution_3y_inverse",
+     "value": -0.0475,
+     "points": 35,
+     "weight": 0.2,
+     "source": "facts:screen.scores.dilution_3y"
+    }
+   ],
+   "guidance_adjustment": 0,
+   "guidance_source": "not given"
+  },
+  "moat": {
+   "points": 35.0,
+   "parts": [
+    {
+     "rule": "single-source supplier (tickers/MU.US/cache/sections/0000723125-26-000023_8.txt)",
+     "points": -15
+    }
+   ],
+   "inputs": {
+    "gross_margin_range_5y": 0.8983,
+    "largest_customer_share": 0.1,
+    "chokepoint_verdicts": []
+   }
+  },
+  "management": {
+   "points": 70.0,
+   "parts": [
+    {
+     "rule": "ROIC trend +20.8% a year over 5 years",
+     "points": 20
+    }
+   ],
+   "roic_series": [
+    0.19657,
+    -0.09521,
+    0.01762,
+    0.16812,
+    1.10544
+   ],
+   "roic_slope": 0.20811
+  },
+  "valuation": {
+   "points": 0.0,
+   "parts": [
+    {
+     "rule": "base-case implied 5-year return 7.5%",
+     "points": 20
+    },
+    {
+     "rule": "low case year-5 value -69% against the price",
+     "points": -10
+    },
+    {
+     "rule": "rare growth: fewer than 20% of comparables achieved the implied growth",
+     "points": -20
+    }
+   ],
+   "base_return_5y": 0.0746
+  }
+ },
+ "max_reachable_total": 65.15,
+ "close_to_pass": true,
+ "pursue_possible": false,
+ "pursue_only_via": [],
+ "pursue_only_via_combined": [],
+ "what_if_combined": [],
+ "pursue_blockers": [
+  "maximum reachable total 65.15 is below 70",
+  "base-case implied 5-year return 7.5% is below the 12% hurdle",
+  "the high case's year-5 value is 3.6x the base case's (over 2.5x), so no buy line or zone is published"
+ ],
+ "pursue_met_now": false,
+ "pursue_met_via": [],
+ "severe_or_fatal_flags": [
+  {
+   "index": 0,
+   "flag": "Earnings and margins are at a shortage peak and price-driven",
+   "severity": "severe",
+   "category": "business"
+  }
+ ],
+ "base_return_5y": 0.0746,
+ "cases_usable": "usable with caveats",
+ "what_if": {
+  "C1": {
+   "growth_y1_5": 0.0296,
+   "margin_target": 0.2764,
+   "exit_ev_ebit": 6.25,
+   "implied_return_5y": 0.1405,
+   "implied_return_5y_industry_exit": 0.4933,
+   "dcf_value_per_share_trading": 968.33,
+   "year5_per_share_trading": 1331.74,
+   "price_lines_trading": {
+    "full_size_below": 662.11,
+    "buy_below": 755.67,
+    "trim_above": 2275.47
+   },
+   "valuation_points_if_supported": 30.0,
+   "total_if_supported": 66.15,
+   "max_reachable_if_supported": 69.65,
+   "meets_hurdle": true,
+   "blockers_if_supported": [
+    "maximum reachable total 69.65 is below 70",
+    "the high case's year-5 value is 3.6x the base case's (over 2.5x), so no buy line or zone is published"
+   ],
+   "clears_blockers": false,
+   "share_of_gap_measured": 1.0
+  }
+ },
+ "inputs_given": true,
+ "notes": []
+}

@@ -1,0 +1,96 @@
+{
+ "key": "MU.US",
+ "run_id": "2026-11-07-semis",
+ "name": "Micron Technology Inc",
+ "cik": "723125",
+ "sec_filer": true,
+ "as_of": "2026-11-07T12:13:13+00:00",
+ "market_cap_usd": 1001015410688.0,
+ "currency": "USD",
+ "fiscal_year_end": "August",
+ "fundamentals_in_cache": true,
+ "files": {
+  "filings.tsv": 276,
+  "insiders.tsv": 381,
+  "sections": [
+   "0000723125-25-000028_1A.txt",
+   "0000723125-26-000023_1.txt",
+   "0000723125-26-000023_1A.txt",
+   "0000723125-26-000023_7.txt",
+   "0000723125-26-000023_7A.txt",
+   "0000723125-26-000023_8.txt",
+   "0001104659-26-123389_8K_5-2.txt"
+  ],
+  "risk_factor_changes.tsv": 223,
+  "capital_raises.tsv": 13,
+  "filed_check.tsv": 5
+ },
+ "gaps": [],
+ "agent_tasks": [
+  "Fill capital_raise_amounts.tsv: amount and unused at-the-market capacity for each prospectus supplement and 8-K raise, from its cover page; 'not stated' in note where the filing gives none, and 'not a financing' for an 8-K 1.01 that is not"
+ ],
+ "latest_annual": {
+  "filed": "2026-10-09",
+  "form": "10-K",
+  "period": "2026-09-03",
+  "items": "",
+  "description": "Form 10-K - Annual report [Section 13 and 15(d), not S-K Item 405]",
+  "accession": "0000723125-26-000023",
+  "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm"
+ },
+ "prior_annual": {
+  "filed": "2025-10-03",
+  "form": "10-K",
+  "period": "2025-08-28",
+  "items": "",
+  "description": "Form 10-K - Annual report [Section 13 and 15(d), not S-K Item 405]",
+  "accession": "0000723125-25-000028",
+  "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm"
+ },
+ "latest_quarter": null,
+ "events_8k": [
+  {
+   "filed": "2026-11-05",
+   "accession": "0001104659-26-123389",
+   "item": "5.02",
+   "code": "5-2",
+   "label": "Departure of Directors or Certain Officers",
+   "url": "https://www.sec.gov/Archives/edgar/data/723125/000110465926123389/tm2629062d1_8k.htm",
+   "file": "sections/0001104659-26-123389_8K_5-2.txt"
+  }
+ ],
+ "acquisitions_after_period": [],
+ "insiders": {
+  "status": "ok",
+  "source": "sec-api Form 4",
+  "window_days": 365,
+  "rows": 381,
+  "buys": 3,
+  "buy_value": 7821723.4,
+  "sales": 293,
+  "sale_value": 338527290.35,
+  "non_market": 0,
+  "sell_to_cover": 0,
+  "s_codes": 293,
+  "sales_under_10b5_1": 273,
+  "latest": "2026-10-16",
+  "second_check": {
+   "status": "agrees",
+   "eodhd_buys": 3,
+   "eodhd_sales": 303,
+   "eodhd_sale_value": 339400857.82,
+   "note": ""
+  }
+ },
+ "risk_factor_counts": {
+  "added": 18,
+  "expanded": 14,
+  "reworded": 9,
+  "unchanged": 182
+ },
+ "going_concern": false,
+ "filed_deviations": [],
+ "sec_calls": 17,
+ "finished_at": "2026-11-07T12:13:54+00:00",
+ "checks_pass": true
+}

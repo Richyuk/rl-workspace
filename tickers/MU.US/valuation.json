@@ -1,0 +1,351 @@
+{
+ "key": "MU.US",
+ "as_of": "2026-11-07",
+ "version": "1.4",
+ "track": "B",
+ "currency": {
+  "statement": "USD",
+  "trading": "USD"
+ },
+ "inputs": {
+  "price_trading": 690.0,
+  "price_date": "2026-11-06",
+  "price_basis": "latest cached close",
+  "shares": 1131423255,
+  "market_cap_statement": 780682045996,
+  "revenue_ttm": 133188000000,
+  "operating_margin_ttm": 0.7459,
+  "ttm_from": "cache as of 2026-11-07 (revenue Q, operating income Q)",
+  "usd_per_statement_unit": 1.0,
+  "usd_per_trading_unit": 1.0,
+  "net_debt": -40642000000,
+  "net_debt_date": "2026-08-31",
+  "net_debt_basis": "borrowings",
+  "minority_interest": 0,
+  "enterprise_value": 740040045996,
+  "tax_rate": 0.2104,
+  "sales_to_capital": 0.852,
+  "sales_to_capital_basis": "own 3-year average",
+  "share_change_pa": 0.0156,
+  "discount_rate": 0.0937,
+  "discount_rate_basis": "US10Y 4.87% + 4.5%",
+  "terminal_growth": 0.025,
+  "industry_group": "Semiconductors & Semiconductor Equipment",
+  "size_bucket": "50bn+",
+  "base_rates_5y": "all industries, 50bn+ (fewer than 30 in Semiconductors & Semiconductor Equipment)",
+  "base_rates_10y": "all industries, 50bn+ (fewer than 30 in Semiconductors & Semiconductor Equipment)",
+  "own_margins_5y": [
+   0.3154,
+   -0.3697,
+   0.0519,
+   0.2641,
+   0.7459
+  ],
+  "own_margins_10y": [
+   0.2888,
+   0.4934,
+   0.3151,
+   0.1401,
+   0.2268,
+   0.3154,
+   -0.3697,
+   0.0519,
+   0.2641,
+   0.7459
+  ],
+  "base_margin_basis": "industry median (Track B)",
+  "low_margin_basis": "industry 25th percentile (own worst -37.0% is below it)",
+  "industry_mature_margin": 0.1798,
+  "exit_multiple_mode": "lower_of_industry_and_dcf"
+ },
+ "cases": {
+  "low": {
+   "growth_y1_5": -0.0221,
+   "margin_target": 0.0978,
+   "growth_first_years": null,
+   "consensus_years": 0,
+   "margin_years": 3,
+   "exit_ev_ebit": 7.67,
+   "exit_ev_ebit_industry": 21.16,
+   "exit_ev_ebit_dcf": 7.67,
+   "implied_return_5y_industry_exit": -0.131,
+   "year5_per_share_trading": 213.37,
+   "year5_per_share_industry_exit_trading": 341.89,
+   "implied_return_5y": -0.2092,
+   "dcf_value_per_share_trading": 182.58,
+   "path": [
+    {
+     "revenue": 130239217680.0,
+     "margin": 0.5298,
+     "ebit": 69006206763.0,
+     "fcff": 57945188091.0
+    },
+    {
+     "revenue": 127355721401.0,
+     "margin": 0.3138,
+     "ebit": 39966899449.0,
+     "fcff": 34940061141.0
+    },
+    {
+     "revenue": 124536065729.0,
+     "margin": 0.0978,
+     "ebit": 12179627228.0,
+     "fcff": 12925197663.0
+    },
+    {
+     "revenue": 121778837234.0,
+     "margin": 0.0978,
+     "ebit": 11909970281.0,
+     "fcff": 12639033787.0
+    },
+    {
+     "revenue": 119082653777.0,
+     "margin": 0.0978,
+     "ebit": 11646283539.0,
+     "fcff": 12359205579.0
+    },
+    {
+     "revenue": 117687957736.0,
+     "margin": 0.0978,
+     "ebit": 11509882267.0,
+     "fcff": 10724358632.0
+    },
+    {
+     "revenue": 117536846398.0,
+     "margin": 0.0978,
+     "ebit": 11495103578.0,
+     "fcff": 9253483348.0
+    },
+    {
+     "revenue": 118611603322.0,
+     "margin": 0.0978,
+     "ebit": 11600214805.0,
+     "fcff": 7898057608.0
+    },
+    {
+     "revenue": 120933069622.0,
+     "margin": 0.0978,
+     "ebit": 11827254209.0,
+     "fcff": 6614447811.0
+    },
+    {
+     "revenue": 124561061711.0,
+     "margin": 0.0978,
+     "ebit": 12182071835.0,
+     "fcff": 5361539851.0
+    }
+   ]
+  },
+  "base": {
+   "growth_y1_5": 0.0296,
+   "margin_target": 0.1798,
+   "growth_first_years": 0.5488,
+   "consensus_years": 2,
+   "margin_years": 10,
+   "exit_ev_ebit": 4.54,
+   "exit_ev_ebit_industry": 32.26,
+   "exit_ev_ebit_dcf": 4.54,
+   "implied_return_5y_industry_exit": 0.4645,
+   "year5_per_share_trading": 988.57,
+   "year5_per_share_industry_exit_trading": 4647.91,
+   "implied_return_5y": 0.0746,
+   "dcf_value_per_share_trading": 728.75,
+   "path": [
+    {
+     "revenue": 206281574400.0,
+     "margin": 0.6893,
+     "ebit": 142180955508.0,
+     "fcff": 26494526092.0
+    },
+    {
+     "revenue": 319488902431.0,
+     "margin": 0.6327,
+     "ebit": 202124779531.0,
+     "fcff": 26755309814.0
+    },
+    {
+     "revenue": 328942579054.0,
+     "margin": 0.576,
+     "ebit": 189485429752.0,
+     "fcff": 138518894771.0
+    },
+    {
+     "revenue": 338675989968.0,
+     "margin": 0.5194,
+     "ebit": 175921109244.0,
+     "fcff": 127480698459.0
+    },
+    {
+     "revenue": 348697412511.0,
+     "margin": 0.4628,
+     "ebit": 161388144850.0,
+     "fcff": 115667978963.0
+    },
+    {
+     "revenue": 359043962135.0,
+     "margin": 0.4062,
+     "ebit": 145852703986.0,
+     "fcff": 103020184866.0
+    },
+    {
+     "revenue": 369726956184.0,
+     "margin": 0.3496,
+     "ebit": 129263530686.0,
+     "fcff": 89527117244.0
+    },
+    {
+     "revenue": 380758129649.0,
+     "margin": 0.293,
+     "ebit": 111566928828.0,
+     "fcff": 75145889274.0
+    },
+    {
+     "revenue": 392149651372.0,
+     "margin": 0.2364,
+     "ebit": 92706647761.0,
+     "fcff": 59831578137.0
+    },
+    {
+     "revenue": 403914140913.0,
+     "margin": 0.1798,
+     "ebit": 72623762536.0,
+     "fcff": 43537129687.0
+    }
+   ]
+  },
+  "high": {
+   "growth_y1_5": 0.0745,
+   "margin_target": 0.7459,
+   "growth_first_years": 0.5488,
+   "consensus_years": 2,
+   "margin_years": 3,
+   "exit_ev_ebit": 12.26,
+   "exit_ev_ebit_industry": 47.62,
+   "exit_ev_ebit_dcf": 12.26,
+   "implied_return_5y_industry_exit": 0.7729,
+   "year5_per_share_trading": 3533.0,
+   "year5_per_share_industry_exit_trading": 12085.62,
+   "implied_return_5y": 0.3863,
+   "dcf_value_per_share_trading": 2500.0,
+   "path": [
+    {
+     "revenue": 206281574400.0,
+     "margin": 0.7459,
+     "ebit": 153857792000.0,
+     "fcff": 35714187892.0
+    },
+    {
+     "revenue": 319488902431.0,
+     "margin": 0.7459,
+     "ebit": 238294948250.0,
+     "fcff": 55314134208.0
+    },
+    {
+     "revenue": 343297215440.0,
+     "margin": 0.7459,
+     "ebit": 256052687793.0,
+     "fcff": 174234754121.0
+    },
+    {
+     "revenue": 368879723934.0,
+     "margin": 0.7459,
+     "ebit": 275133734088.0,
+     "fcff": 187218727998.0
+    },
+    {
+     "revenue": 396368640962.0,
+     "margin": 0.7459,
+     "ebit": 295636699952.0,
+     "fcff": 201170267608.0
+    },
+    {
+     "revenue": 422376765707.0,
+     "margin": 0.7459,
+     "ebit": 315035197656.0,
+     "fcff": 218224252414.0
+    },
+    {
+     "revenue": 446330596844.0,
+     "margin": 0.7459,
+     "ebit": 332901473785.0,
+     "fcff": 234741382564.0
+    },
+    {
+     "revenue": 467668770018.0,
+     "margin": 0.7459,
+     "ebit": 348816827444.0,
+     "fcff": 250376823669.0
+    },
+    {
+     "revenue": 485862955847.0,
+     "margin": 0.7459,
+     "ebit": 362387197299.0,
+     "fcff": 264780674512.0
+    },
+    {
+     "revenue": 500438844522.0,
+     "margin": 0.7459,
+     "ebit": 373258813218.0,
+     "fcff": 277610223472.0
+    }
+   ]
+  }
+ },
+ "consensus_anchor": {
+  "growth": 0.5488,
+  "years": 2,
+  "fiscal_year_end": "2028-08-31",
+  "revenue": 319680348470,
+  "analysts": 42,
+  "span_years": 2.0
+ },
+ "consensus_anchor_note": "consensus revenue 319,680,348,470 for the year to 2028-08-31 (42 analysts): 54.9% a year from the TTM",
+ "base_rates_only": {
+  "growth_y1_5": 0.0296,
+  "margin_target": 0.1798,
+  "exit_ev_ebit": 4.54,
+  "implied_return_5y": -0.0453,
+  "implied_return_5y_industry_exit": 0.2569,
+  "year5_per_share_trading": 547.23,
+  "dcf_value_per_share_trading": 429.06
+ },
+ "price_lines_trading": {
+  "full_size_below": 491.49,
+  "buy_below": 560.94,
+  "trim_above": 1689.11
+ },
+ "trim_return": -0.1016,
+ "reference_lines_trading": {
+  "trim_6pct": 738.72,
+  "exit_0pct": 988.57
+ },
+ "price_line_band": {
+  "low": {
+   "full_size_below": 106.08,
+   "buy_below": 121.07,
+   "trim_above": 364.57
+  },
+  "high": {
+   "full_size_below": 1756.53,
+   "buy_below": 2004.72,
+   "trim_above": 6036.64
+  },
+  "base_industry_exit": {
+   "full_size_below": 2310.83,
+   "buy_below": 2637.35,
+   "trim_above": 7941.62
+  }
+ },
+ "high_to_base_year5": 3.57,
+ "high_to_base_limit": 2.5,
+ "expectations": {
+  "implied_growth_10y": 0.1722,
+  "implied_growth_10y_track_a": -0.0416,
+  "implied_growth_10y_industry_margin": 0.2935,
+  "share_of_comparables_achieving": 0.05,
+  "share_bound": "at_most",
+  "comparables_n": 1375,
+  "rare_growth": true
+ },
+ "notes": []
+}

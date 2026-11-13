@@ -1,0 +1,2 @@
+rank	stage	key	name	track	module	peer_group	composite	composite_group_pct	implied_return_5y	implied_return_5y_industry_exit	gate_basis	valuation_note	gate_trap_flags	gate_warning_flags	nodata	falling_sharply	gate_filings_checks
+11	deep_dive	MU.US	Micron Technology Inc	B	standard	Semiconductors & Semiconductor Equipment	79.9586	100.0000	0.0746	0.4645	implied_return_5y_industry_exit_only	no pool cut for this run (analysis/pool_cut.json): no trim line				True	checked

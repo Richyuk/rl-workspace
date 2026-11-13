@@ -1,0 +1,890 @@
+{
+ "key": "MU.US",
+ "run_id": "2026-11-07-semis",
+ "config_version": "1.1",
+ "time_london": "2026-11-07T18:10:39+00:00",
+ "status": "ready",
+ "stops": [],
+ "cache_as_of": "2026-11-07",
+ "facts_cache_as_of": "2026-11-07",
+ "cache_commit": "21aefedee07d049e31f34d4dbdf84e3f4c6557cf",
+ "cache_generation": 5,
+ "facts_cache_commit": "21aefedee07d049e31f34d4dbdf84e3f4c6557cf",
+ "claims": {
+  "version": 2,
+  "sha256": "b7049135259f63db6fec12120dfc69a0ae5cd2766b6f45cf198ccf550c1202c5",
+  "recorded_thesis_checks": "b7049135259f63db6fec12120dfc69a0ae5cd2766b6f45cf198ccf550c1202c5",
+  "recorded_claims_hashes_tsv": "b7049135259f63db6fec12120dfc69a0ae5cd2766b6f45cf198ccf550c1202c5",
+  "change_reason": "Wording correction to C1's statement only, found on re-reading after v1 was committed, pushed, priced and checked: v1 attributed the remaining performance obligations disclosure to '10-K Note 8'; it is Note 16 (Revenue and Customer Contract Liabilities) within Item 8 (tickers/MU.US/cache/sections/0000723125-26-000023_8.txt). No metric, metric_ref, current value, test, kill, review date, share estimate, source, macro condition or override changed. C1's override (margin_target 0.27645) is unchanged; v1's had been priced at 14.05% a year with a measured share of the gap of 1.0, and v1 had passed check_thesis once.",
+  "dossier_commit": "2ab7741a44d282b9522c139074062f0f3ad6cd5c",
+  "history": [
+   {
+    "version": 1,
+    "file": "tickers/MU.US/claims_history/v1.json",
+    "sha256": "ac3249f52844aec071e2e2218bc0af7e3e25aff4bc8a2cf0a87db79152f53184",
+    "claims": [
+     "C1",
+     "C2",
+     "C3"
+    ]
+   }
+  ]
+ },
+ "redteam": {
+  "present": true,
+  "passed": true,
+  "started_at_commit": "2ab7741a44d282b9522c139074062f0f3ad6cd5c",
+  "blindness": "blind",
+  "blindness_reason": "no claims.json at the Red Team's commit",
+  "allowed_visible_claims": null,
+  "bear_verdict": "caution",
+  "strongest_objection": "R1",
+  "avoid_basis": null,
+  "objections": [
+   {
+    "id": "R1",
+    "topic": "margin",
+    "severity": "severe",
+    "statement": "Earnings are a shortage price. FY2026's operating margin of 74.6% followed 26.4% in FY2025 and -37.0% in FY2023, against a previous peak of 49.3%; DRAM ASP rose about 180% and NAND about 200% on DRAM bits up about 25%. The 10-K says AI-driven demand 'may not be sustainable' and the strategic agreements are estimated at over 35% of revenue through 2030, so most revenue floats. A 50% fall needs only an 18.6% margin on flat revenue at the own median multiple."
+   },
+   {
+    "id": "R2",
+    "topic": "multiple",
+    "severity": "moderate",
+    "statement": "The price is not cheap against the valuation's own lines. At $690 it is 23.0% above the buy-below line of $560.94 and the base-case DCF value is $728.75 (the price is 5.3% under it), with a base-case return of 7.5% a year on the DCF exit; the reverse DCF needs 17.2% growth a year for ten years, a rate at most 5% of 1,375 comparables achieved. Cash is also not all free: $12.75bn of customer deposits are owed back in 2029-2031 and noncurrent tax payables are rising."
+   },
+   {
+    "id": "R3",
+    "topic": "competition",
+    "severity": "moderate",
+    "statement": "Supply is being added at the top of the cycle by every producer. Micron's capex was $30.7bn in FY2026 and is guided to about $25bn in the first half of FY2027 net of incentives; Samsung's HBM revenue share rose from 21% to 33% in a quarter while Micron's was 18% (SK hynix 50%); CXMT is about 10% of DRAM revenue and state-backed. A review of past cycles finds oversupply tends to arise within two to three years when all three majors expand together."
+   },
+   {
+    "id": "R4",
+    "topic": "growth",
+    "severity": "moderate",
+    "statement": "Demand is concentrated and the Street needs another doubling. About 60% of FY2026 revenue was data centre and about half came from ten customers, both new risk factors; consensus FY2027 revenue of $275.5bn is 2.07 times FY2026's, while consensus for the November quarter is only 13.9% above the August quarter. The 17.5% one-day fall on 5 Nov 2026 was attributed to fears of slower data-centre build-outs."
+   },
+   {
+    "id": "R5",
+    "topic": "capital_allocation",
+    "severity": "moderate",
+    "statement": "Through-cycle returns are a commodity's, and spending follows the price. ROIC was 1.0% in FY2016, -9.5% in FY2023 and 1.8% in FY2024 against 110.5% in FY2026. In 2017-2025 operating cash flow less capex was only $15.9bn on about $86.4bn of capex; FY2026 alone had $59.0bn, and the next fabs (Idaho, New York, Hiroshima, Singapore, Tongluo) are being committed at today's price level."
+   },
+   {
+    "id": "R6",
+    "topic": "other",
+    "severity": "moderate",
+    "statement": "Taiwan makes about 60% of Micron's DRAM, and a Taoyuan union held a warning strike on 22 Oct 2026 and demands 15% of operating profit. Bloomberg reported on 5 Nov that Fab 11E construction (up to $4.5bn) was halted, though Micron says Taiwan operations are normal. The 10-K added strike and stoppage risk factors, including liability under the strategic agreements if deliveries stop; a settlement sets a precedent for cost per bit."
+   }
+  ]
+ },
+ "recompute": {
+  "tolerance": 0.02,
+  "items": [
+   {
+    "name": "TTM revenue",
+    "source": "raw statements in the cache, 4 quarters: 2025-11-30, 2026-02-28, 2026-05-31, 2026-08-31",
+    "recomputed": 133188000000.0,
+    "dossier": 133188000000.0,
+    "dossier_path": "facts:derived.ttm.revenue",
+    "gap": 0.0,
+    "ok": true
+   },
+   {
+    "name": "Base-case year-5 value per share",
+    "source": "valuation code with the Analyst's market inputs held",
+    "recomputed": 988.57,
+    "dossier": 988.57,
+    "dossier_path": "facts:valuation.cases.base.year5_per_share_trading",
+    "gap": 0.0,
+    "ok": true
+   },
+   {
+    "name": "Implied 10-year growth",
+    "source": "valuation code with the Analyst's market inputs held",
+    "recomputed": 0.1722,
+    "dossier": 0.1722,
+    "dossier_path": "facts:valuation.expectations.implied_growth_10y",
+    "gap": 0.0,
+    "ok": true
+   }
+  ],
+  "price_now": 690.0,
+  "price_now_date": "2026-11-06",
+  "price_now_basis": "latest cached close",
+  "price_at_analysis": 690.0,
+  "held_at_analysis": {
+   "price_trading": 690.0,
+   "shares": 1131423255.0,
+   "market_capitalization": 780682045950.0,
+   "usd_per_statement_unit": 1.0,
+   "usd_per_trading_unit": 1.0,
+   "macro_from": "facts.macro",
+   "ttm_from": "cache as of 2026-11-07 (revenue Q, operating income Q)",
+   "discount_rate_recomputed": 0.0937,
+   "discount_rate_at_analysis": 0.0937
+  }
+ },
+ "score": {
+  "total": 61.65,
+  "dimensions": {
+   "quality": 100.0,
+   "growth": 87.0,
+   "moat": 35.0,
+   "management": 70.0,
+   "valuation": 0.0
+  },
+  "base_return_5y": 0.0746,
+  "pursue_blockers": [
+   "maximum reachable total 65.15 is below 70",
+   "base-case implied 5-year return 7.5% is below the 12% hurdle",
+   "the high case's year-5 value is 3.6x the base case's (over 2.5x), so no buy line or zone is published"
+  ],
+  "pursue_met_now": false,
+  "pursue_met_via": []
+ },
+ "evidence": [
+  {
+   "id": "C1",
+   "role": "core",
+   "type": "base_rate_deviation",
+   "statement": "Micron's mature operating margin is at least 27.645%, the median of its own annual operating margins over FY2017-FY2026. The code's Track B base case instead fades the margin over ten years to 17.98%, the Semiconductors & Semiconductor Equipment median. The own median already includes the FY2023 trough (-36.97%) as well as the FY2026 spike (74.59%). The case for a higher floor than in past cycles rests on contracts that are new this year. The take-or-pay strategic customer agreements carry minimum and maximum price bands. Remaining performance obligations were about $134bn at 3 Sep 2026, measured at committed volumes and minimum pricing (10-K Note 16, Revenue and Customer Contract Liabilities). About one-fourth is due within twelve months and all within five years, secured by $12.75bn of customer deposits and $7bn of letters of credit. The 10-K says gross margins under these agreements, even at floor prices, should be meaningfully above peak quarterly margins in any past cycle; the best past annual gross margin was 58.87% (FY2018). Against the claim, a secondary source estimates the agreements at over 35% of revenue through 2030, so most revenue still follows market prices, and revenue fell in 7 of the last 19 years. Override: margin_target 0.27645. Test: TTM operating margin of at least 50% at every quarter-end through the August 2028 quarter (FY2028). That is above every annual margin before FY2026 (peak 49.34% in FY2018); the code's own path is 68.93% in year 1 and 63.27% in year 2.",
+   "metric": "Trailing-12-month operating margin",
+   "metric_ref": "facts:derived.ttm.operating_margin",
+   "value_now": 0.74586,
+   "value_now_in_unit": 74.586,
+   "metric_error": null,
+   "unit": "%",
+   "test": {
+    "operator": ">=",
+    "threshold": 50.0,
+    "period": "each quarter-end to the August 2028 quarter (FY2028)"
+   },
+   "test_passes_now": true,
+   "kill": {
+    "operator": "<",
+    "threshold": 46.28,
+    "consecutive_periods": 2,
+    "description": "TTM operating margin below 46.28% at two consecutive quarter-ends before the review. That is the code's own year-5 base margin reached within two years and below the FY2018 peak of 49.34%: margins fading more than twice as fast as the code's path, so the price-band contracts did not change the cycle."
+   },
+   "kill_applies_now": true,
+   "kill_breached_now": false,
+   "test_threshold_base": 0.5,
+   "kill_threshold_base": 0.4628,
+   "share_of_gap": 1.0,
+   "share_of_gap_basis": "measured",
+   "override": {
+    "margin_target": 0.27645
+   },
+   "what_if": {
+    "implied_return_5y": 0.1405,
+    "implied_return_5y_industry_exit": 0.4933,
+    "total_if_supported": 66.15,
+    "clears_blockers": false,
+    "share_of_gap_measured": 1.0
+   },
+   "sources": [
+    "facts:derived.ttm.operating_margin",
+    "facts:valuation.inputs.own_margins_10y",
+    "facts:valuation.inputs.industry_mature_margin",
+    "facts:valuation.cases.base.margin_target",
+    "facts:valuation.cases.base.margin_years",
+    "facts:valuation.cases.base.path.0.margin",
+    "facts:valuation.cases.base.path.1.margin",
+    "facts:valuation.cases.base.path.4.margin",
+    "facts:financials_annual.2018-08-31.operating_margin",
+    "facts:financials_annual.2018-08-31.gross_margin",
+    "facts:financials_annual.2023-08-31.operating_margin",
+    "calc:({valuation.inputs.own_margins_10y.8}+{valuation.inputs.own_margins_10y.0})/2",
+    "tickers/MU.US/cache/sections/0000723125-26-000023_1.txt",
+    "tickers/MU.US/cache/sections/0000723125-26-000023_7.txt",
+    "tickers/MU.US/cache/sections/0000723125-26-000023_8.txt",
+    "dossier:business.cyclicality",
+    "dossier:expectations.reading",
+    "dossier:expectations.case_comments"
+   ],
+   "related_objections": [
+    "R1",
+    "R3"
+   ]
+  },
+  {
+   "id": "C2",
+   "role": "supporting",
+   "type": "risk_rebuttal",
+   "statement": "Dossier red flag 0 says earnings and margins are at a shortage peak and price-driven: a 74.59% FY2026 operating margin against a ten-year range of -36.97% to 74.59%. The answer is that FY2026 is not the earnings peak. TTM operating income stays at or above the FY2026 figure of $99.34bn at every quarter-end through the August 2028 quarter. The August 2026 quarter alone earned $43.75bn of operating income on $54.23bn of revenue. The company guided $61.5bn of revenue for the November 2026 quarter (CNBC report of the 30 Sep 2026 release), and in that quarter the November 2025 quarter's $6.14bn drops out of the trailing sum. Consensus revenue is $275.5bn for FY2027 and $319.7bn for FY2028. About one-fourth of the $134bn of remaining performance obligations, measured at minimum pricing, falls in the next twelve months. The test therefore bites in FY2028, when Micron's own Idaho fab (first wafers mid-2027), CXMT and Samsung add supply.",
+   "metric": "Trailing-12-month operating income",
+   "metric_ref": "facts:derived.ttm.operating_income",
+   "value_now": 99340000000.0,
+   "value_now_in_unit": 99.34,
+   "metric_error": null,
+   "unit": "USD bn",
+   "test": {
+    "operator": ">=",
+    "threshold": 99.34,
+    "period": "each quarter-end to the August 2028 quarter (FY2028)"
+   },
+   "test_passes_now": true,
+   "kill": {
+    "operator": "<",
+    "threshold": 85.0,
+    "consecutive_periods": 2,
+    "description": "TTM operating income below $85bn at two consecutive quarter-ends. Quarterly operating income would then be averaging under about $21bn against $43.75bn in the August 2026 quarter: a cyclical fall the contracts did not stop, so FY2026 was the peak."
+   },
+   "kill_applies_now": true,
+   "kill_breached_now": false,
+   "test_threshold_base": 99340000000.0,
+   "kill_threshold_base": 85000000000.0,
+   "share_of_gap": 0.05,
+   "share_of_gap_basis": "estimate",
+   "override": null,
+   "what_if": null,
+   "sources": [
+    "dossier:red_flags.0",
+    "facts:derived.ttm.operating_income",
+    "facts:financials_quarterly.2026-08-31.operating_income",
+    "facts:financials_quarterly.2026-08-31.revenue",
+    "facts:financials_quarterly.2025-11-30.operating_income",
+    "facts:estimates.trend.2026-11-30.revenueEstimateAvg",
+    "facts:estimates.trend.2027-08-31.revenueEstimateAvg",
+    "facts:estimates.trend.2028-08-31.revenueEstimateAvg",
+    "tickers/MU.US/cache/sections/0000723125-26-000023_7.txt",
+    "tickers/MU.US/cache/sections/0000723125-26-000023_8.txt",
+    "https://www.cnbc.com/2026/09/30/micron-mu-q4-earnings-report-2026.html",
+    "dossier:expectations.what_would_change_it"
+   ],
+   "related_objections": [
+    "R6"
+   ]
+  },
+  {
+   "id": "C3",
+   "role": "supporting",
+   "type": "capital_allocation",
+   "statement": "The code's base case charges reinvestment at a sales-to-capital ratio of 0.852 on revenue growth that is mostly price. Its free cash flow to the firm, $26.49bn in year 1 and $26.76bn in year 2, is therefore far below what the business will produce. TTM operating cash flow less capex stays at or above $52.99bn, twice the code's year-1 figure, at every quarter-end through the August 2028 quarter. In FY2026 Micron added $95.81bn of revenue on $30.71bn of capex and produced $58.96bn of operating cash flow less capex. For year 1's added revenue the code charges $85.79bn of reinvestment. Against the claim: capex is guided at about $25bn, net of incentives, in the first half of FY2027 and higher in the second half. FY2026 cash taxes of $1.25bn ran far below the $14.76bn provision and will catch up. Receivables rose $25.2bn in the year.",
+   "metric": "TTM operating cash flow less TTM capex",
+   "metric_ref": "calc:{derived.ttm.ocf}-{derived.ttm.capex}",
+   "value_now": 58963000000.0,
+   "value_now_in_unit": 58.963,
+   "metric_error": null,
+   "unit": "USD bn",
+   "test": {
+    "operator": ">=",
+    "threshold": 52.99,
+    "period": "each quarter-end to the August 2028 quarter (FY2028)"
+   },
+   "test_passes_now": true,
+   "kill": {
+    "operator": "<",
+    "threshold": 26.49,
+    "consecutive_periods": 2,
+    "description": "TTM operating cash flow less capex below $26.49bn, the code's own year-1 free cash flow to the firm, at two consecutive quarter-ends. The code's reinvestment charge would then be right, and the extra value the Analyst's case comments describe would not exist."
+   },
+   "kill_applies_now": true,
+   "kill_breached_now": false,
+   "test_threshold_base": 52990000000.0,
+   "kill_threshold_base": 26490000000.0,
+   "share_of_gap": 0.15,
+   "share_of_gap_basis": "estimate",
+   "override": null,
+   "what_if": null,
+   "sources": [
+    "facts:derived.ttm.ocf",
+    "facts:derived.ttm.capex",
+    "facts:derived.ttm.revenue",
+    "facts:financials_annual.2025-08-31.revenue",
+    "facts:valuation.inputs.sales_to_capital",
+    "facts:valuation.cases.base.path.0.fcff",
+    "facts:valuation.cases.base.path.1.fcff",
+    "calc:({valuation.cases.base.path.0.revenue}-{valuation.inputs.revenue_ttm})/{valuation.inputs.sales_to_capital}",
+    "dossier:expectations.case_comments",
+    "dossier:financial_quality.earnings_quality",
+    "tickers/MU.US/cache/sections/0000723125-26-000023_7.txt",
+    "tickers/MU.US/cache/sections/0000723125-26-000023_8.txt"
+   ],
+   "related_objections": [
+    "R5"
+   ]
+  }
+ ],
+ "macro": [
+  {
+   "id": "M1",
+   "series": "US10Y",
+   "operator": "<",
+   "threshold": 5.5,
+   "value_at_facts": 4.867,
+   "value_today": 4.867,
+   "holds_today": true
+  },
+  {
+   "id": "M2",
+   "series": "CMDI_IG",
+   "operator": "<",
+   "threshold": 0.5,
+   "value_at_facts": 0.25,
+   "value_today": 0.25,
+   "holds_today": true
+  }
+ ],
+ "red_flags": [
+  {
+   "index": 0,
+   "flag": "Earnings and margins are at a shortage peak and price-driven",
+   "severity": "severe",
+   "category": "business",
+   "rebuttal_claims": [
+    "C2"
+   ]
+  }
+ ],
+ "price_lines_trading": {
+  "full_size_below": 491.49,
+  "buy_below": 560.94,
+  "trim_above": 1689.11
+ },
+ "track": "B",
+ "sound_business": {
+  "sound": true,
+  "roic_latest": 1.10544,
+  "roic_year": "2026",
+  "roic_two_years_earlier": 0.01762,
+  "discount_rate": 0.0937,
+  "basis": "ROIC at or above the discount rate"
+ },
+ "p_intact_scope": [
+  {
+   "claim_id": "C1",
+   "why": "kill applies now"
+  },
+  {
+   "claim_id": "C2",
+   "why": "kill applies now"
+  },
+  {
+   "claim_id": "C3",
+   "why": "kill applies now"
+  }
+ ],
+ "thesis": {
+  "schema_version": "2.1",
+  "key": "MU.US",
+  "run_id": "2026-11-07-semis",
+  "as_of": "2026-11-07",
+  "claims_version": 2,
+  "summary": "The code's total is 61.65 against 70 (maximum reachable 65.15). The 10-K's single-supplier disclosure costs 15 moat points. Valuation decides how near the total gets: it scores 0 on a 7.46% base-case return, after -20 for rare growth and -10 for the low case. Core claim C1: the mature operating margin is at least Micron's own ten-year median of 27.645%, not the 17.98% industry median the code fades it to. If C1 is supported, the code's base case returns 14.05% a year with a buy line of $755.67, above the $690 price, and the total is 66.15. C2 rebuts the severe peak-earnings flag (TTM operating income at or above $99.34bn through FY2028). C3 says the code overcharges reinvestment. Both macro conditions hold today (US 10-year 4.867% below 5.5; CMDI_IG 0.25 below 0.5).",
+  "thesis_in_three_sentences": "At $690 the market pays 7.45 times TTM EBIT, below Micron's own 25th percentile of 10.23, because it prices FY2026's 74.59% operating margin as a peak that will fall back to industry levels. Take-or-pay contracts with price floors, $134bn of them at minimum pricing, make Micron's own ten-year median margin of 27.645% the right end point rather than the 17.98% industry median (C1); on that margin the code's base case returns 14.05% a year. The case is wrong if TTM operating margin falls below 46.28% or TTM operating income below $85bn at two consecutive quarter-ends before the August 2028 quarter.",
+  "mispricing": {
+   "market_view": "On the code's Track B rule (margin fading from 74.59% to the 17.98% industry median over ten years), the $690 price needs 17.22% revenue growth a year for ten years, which at most 5% of 1,375 comparables achieved. If today's margin were simply held, it needs revenue to shrink 4.16% a year. Enterprise value is 7.45 times TTM EBIT, against an own median of 14.13 and a minimum of 6.19. The market is pricing a margin collapse, not a growth path.",
+   "our_view": "The fade's end point is too low for the business Micron has become. Its own ten-year median operating margin of 27.645%, a span that includes the FY2023 trough, is the better base rate, and the contracts signed in FY2026 put a floor under part of the volume (C1). FY2026 is not the earnings peak: the August 2026 quarter alone earned $43.75bn of operating income (C2). Cash generation is far above the code's free cash flow to the firm (C3). On C1 alone, the code's base case returns 14.05% a year and the buy line rises to $755.67.",
+   "catalyst": {
+    "event": "The FY2027 results and 10-K (fiscal year to early September 2027; the FY2026 release came on 30 Sep 2026) and the first-quarter FY2028 results. This is the first full fiscal year under the strategic customer agreements and the first period in which the Idaho fab's first wafers (mid-2027) add supply. TTM operating margin at or above 50% through those results would show that the fade the price assumes is not happening (C1).",
+    "window_start": "2027-09-01",
+    "window_end": "2027-12-31",
+    "claim_id": "C1"
+   }
+  },
+  "supply_chain_position": "The map places Micron in the memory-and-storage tier with high AI-capex exposure: about 60% of FY2026 revenue was data centre. Nvidia's and Qualcomm's 10-Ks name Micron as a memory supplier. Lam Research, Rambus and Silicon Motion name it as a customer. The 10-K names Samsung, SK hynix, Sandisk, CXMT and YMTC as competitors. The map proposes no chokepoint and the dossier records none, so the moat score gets no chokepoint points. The tier is not crowded; XSD had a 4-week outflow of 7.76% of assets and XLK an inflow of 1.38%.",
+  "valuation_reading": "The code's base case takes consensus growth of 54.88% a year for two years, then base rates, with the margin fading to 17.98% (46.28% in year 5). Its exit is the DCF cap of 4.54 times EBIT, against 32.26 for the industry. That gives 7.46% a year (46.45% at the industry exit), a DCF value of $728.75 and a buy line of $560.94 against the $690 price. The low case returns -20.92% and the high case 38.63%; the high case is 3.57 times the base at year 5, so no zone is published. C1's what-if (margin_target 27.645%, priced after the claims were pushed) gives an exit of 6.25 times, 14.05% a year, a DCF value of $968.33 and a buy line of $755.67, a measured share of the gap of 1.0. The thesis makes no exit-multiple claim: the own EV/EBIT history covers 15 quarter-ends from November 2021 (median 14.13, 25th percentile 10.23, 75th 18.85), and its 85.51 maximum was set on trough earnings. The Analyst's caveats (overstated reinvestment, a 21.04% tax rate, net cash leaving out $30.0bn of long-term investments) all point to a higher value.",
+  "bull_case": "Operating income was $43.75bn in the August 2026 quarter, at an 80.68% margin. Remaining performance obligations under take-or-pay agreements are $134bn, measured at minimum pricing, and are backed by $12.75bn of deposits and $7bn of letters of credit. Net cash on the broad basis is about $68.3bn. Consensus revenue rises to $319.7bn in FY2028. At 7.45 times TTM EBIT, the earnings yield stays high even if the margin halves, and the code's own base case returns 14.05% if the margin settles at Micron's own median.",
+  "bear_case": "FY2026 was price, not volume: DRAM prices rose about 180% on bit growth in the mid-20% range. Operating margins over ten years ran from -36.97% to 74.59%, and revenue fell in 7 of 19 years, including -49.48% in FY2023. Micron, Samsung, SK hynix and CXMT are all adding capacity, and Micron guides about $25bn of capex in the first half of FY2027 alone. The agreements are estimated at only over 35% of revenue, and a Taiwan labour dispute affects about 60% of DRAM output. Insiders sold $338.53m and bought $7.82m.",
+  "peers": [
+   {
+    "key": "samsung",
+    "name": "Samsung Electronics",
+    "comparison": "The largest memory maker and a named competitor. The dossier cites Counterpoint (via a secondary source) for Samsung's HBM revenue share rising from 21% to 33% between Q1 and Q2 2026, against Micron's 18%."
+   },
+   {
+    "key": "skhynix",
+    "name": "SK hynix",
+    "comparison": "A named competitor and HBM leader, with a 50% HBM revenue share in Q2 2026 (Counterpoint, secondary). The cache holds no SK hynix figures."
+   },
+   {
+    "key": "sndk",
+    "name": "Sandisk",
+    "comparison": "A NAND competitor, deep-dived in this run, that has signed similar multi-year agreements with floor prices. Unlike Micron it has no DRAM and no fabs of its own."
+   },
+   {
+    "key": "cxmt",
+    "name": "CXMT",
+    "comparison": "State-backed Chinese DRAM maker named in the 10-K, about 10% of DRAM revenue (Counterpoint, per industry reports). The main new supply risk to C1 and C2."
+   }
+  ],
+  "score_inputs": {
+   "guidance": null,
+   "single_source_supplier": {
+    "value": true,
+    "source": "tickers/MU.US/cache/sections/0000723125-26-000023_8.txt",
+    "note": "10-K Note 21: Micron generally has multiple sources, but in some cases materials or production equipment are provided by a single supplier (Item 1 and 1A repeat it for materials, components and services). Read as single-source, as for KLIC in this run"
+   },
+   "largest_customer_share": {
+    "value": 0.1,
+    "source": "tickers/MU.US/cache/sections/0000723125-26-000023_8.txt",
+    "note": "Upper bound: 10-K Note 21 says no customer accounted for 10% or more of FY2026 revenue (one was 17% in FY2025); the true share is below 10%, under the 20% that costs moat points"
+   },
+   "pay_tied_to_returns": null
+  },
+  "kill_criteria": [
+   {
+    "criterion": "TTM operating margin below 46.28%, the code's year-5 base margin, at two consecutive quarter-ends before the August 2028 quarter. That is below the FY2018 peak of 49.34%, and would mean the price-band contracts have not changed the cycle.",
+    "claim_id": "C1"
+   },
+   {
+    "criterion": "TTM operating income below $85bn at two consecutive quarter-ends, meaning quarterly operating income averaging under about $21bn against $43.75bn in the August 2026 quarter. FY2026 would then have been the peak.",
+    "claim_id": "C2"
+   },
+   {
+    "criterion": "TTM operating cash flow less capex below $26.49bn, the code's year-1 free cash flow to the firm, at two consecutive quarter-ends. The code's reinvestment charge would then be right.",
+    "claim_id": "C3"
+   }
+  ],
+  "next_review": "2026-12-18",
+  "gaps": [
+   "Guidance record: no history of guided against actual results is in the cache, so the guidance input is null (0 points).",
+   "Pay: the FY2026 proxy is not filed and no proxy rows are in the cache; CEO pay comes only from a secondary summary of the FY2025 proxy, so pay_tied_to_returns is null (0 points).",
+   "Remaining performance obligations ($134bn) and the strategic agreements' share of revenue (over 35%, secondary) are not cache series, so no claim uses them as a metric_ref; C1 and C2 test their effect through TTM margin and operating income.",
+   "HBM shares and CXMT's DRAM share come from secondary pages relaying Counterpoint; the November-quarter guidance comes from CNBC's report, not the release.",
+   "The 10-K's floor-price gross margin statement compares with 'peak quarterly margins in any past cycle'; the cache's quarterly history starts in November 2023, so FY2018's annual gross margin of 58.87% is used as a lower bound on that peak."
+  ],
+  "deviations": [
+   "Pursue is blocked, so every section except the claims, kill criteria and reopen conditions is kept to a few sentences (step 2 of the instructions)."
+  ],
+  "figures": [
+   {
+    "name": "Valuation price (6 Nov 2026 close)",
+    "value": 690.0,
+    "unit": "USD",
+    "period": "6 Nov 2026",
+    "source": "facts:valuation.inputs.price_trading"
+   },
+   {
+    "name": "High case year-5 value over base case year-5 value",
+    "value": 3.57,
+    "unit": "x",
+    "period": "year 5",
+    "source": "facts:valuation.high_to_base_year5"
+   },
+   {
+    "name": "Limit above which no zone is published",
+    "value": 2.5,
+    "unit": "x",
+    "period": "valuation",
+    "source": "facts:valuation.high_to_base_limit"
+   },
+   {
+    "name": "Thesis total (computed in code)",
+    "value": 61.65,
+    "unit": "points",
+    "period": "as of",
+    "source": "scores:total"
+   },
+   {
+    "name": "Maximum reachable total",
+    "value": 65.15,
+    "unit": "points",
+    "period": "as of",
+    "source": "scores:max_reachable_total"
+   },
+   {
+    "name": "Valuation dimension points",
+    "value": 0.0,
+    "unit": "points",
+    "period": "as of",
+    "source": "scores:dimensions.valuation"
+   },
+   {
+    "name": "Moat dimension points",
+    "value": 35.0,
+    "unit": "points",
+    "period": "as of",
+    "source": "scores:dimensions.moat"
+   },
+   {
+    "name": "Base case implied 5-year annual return, DCF exit",
+    "value": 7.46,
+    "unit": "%",
+    "period": "5y",
+    "source": "facts:valuation.cases.base.implied_return_5y"
+   },
+   {
+    "name": "Base case implied 5-year annual return, industry exit",
+    "value": 46.45,
+    "unit": "%",
+    "period": "5y",
+    "source": "facts:valuation.cases.base.implied_return_5y_industry_exit"
+   },
+   {
+    "name": "Base case DCF exit multiple",
+    "value": 4.54,
+    "unit": "x",
+    "period": "year 5",
+    "source": "facts:valuation.cases.base.exit_ev_ebit"
+   },
+   {
+    "name": "Industry exit multiple",
+    "value": 32.26,
+    "unit": "x",
+    "period": "year 5",
+    "source": "facts:valuation.cases.base.exit_ev_ebit_industry"
+   },
+   {
+    "name": "Base case DCF value per share",
+    "value": 728.75,
+    "unit": "per share",
+    "period": "valuation",
+    "source": "facts:valuation.cases.base.dcf_value_per_share_trading"
+   },
+   {
+    "name": "Base case buy line",
+    "value": 560.94,
+    "unit": "USD",
+    "period": "valuation",
+    "source": "facts:valuation.price_lines_trading.buy_below"
+   },
+   {
+    "name": "Consensus growth a year for the first two years",
+    "value": 54.88,
+    "unit": "%",
+    "period": "2y",
+    "source": "facts:valuation.cases.base.growth_first_years"
+   },
+   {
+    "name": "Base case year-5 operating margin",
+    "value": 46.28,
+    "unit": "%",
+    "period": "year 5",
+    "source": "facts:valuation.cases.base.path.4.margin"
+   },
+   {
+    "name": "Base case year-1 operating margin",
+    "value": 68.93,
+    "unit": "%",
+    "period": "year 1",
+    "source": "facts:valuation.cases.base.path.0.margin"
+   },
+   {
+    "name": "Base case year-2 operating margin",
+    "value": 63.27,
+    "unit": "%",
+    "period": "year 2",
+    "source": "facts:valuation.cases.base.path.1.margin"
+   },
+   {
+    "name": "Low case implied 5-year annual return",
+    "value": -20.92,
+    "unit": "%",
+    "period": "5y",
+    "source": "facts:valuation.cases.low.implied_return_5y"
+   },
+   {
+    "name": "High case implied 5-year annual return",
+    "value": 38.63,
+    "unit": "%",
+    "period": "5y",
+    "source": "facts:valuation.cases.high.implied_return_5y"
+   },
+   {
+    "name": "C1 what-if: base case 5-year annual return",
+    "value": 14.05,
+    "unit": "%",
+    "period": "5y",
+    "source": "scores:what_if.C1.implied_return_5y"
+   },
+   {
+    "name": "C1 what-if: buy line",
+    "value": 755.67,
+    "unit": "USD",
+    "period": "valuation",
+    "source": "scores:what_if.C1.price_lines_trading.buy_below"
+   },
+   {
+    "name": "C1 what-if: exit multiple",
+    "value": 6.25,
+    "unit": "x",
+    "period": "year 5",
+    "source": "scores:what_if.C1.exit_ev_ebit"
+   },
+   {
+    "name": "C1 what-if: DCF value per share",
+    "value": 968.33,
+    "unit": "per share",
+    "period": "valuation",
+    "source": "scores:what_if.C1.dcf_value_per_share_trading"
+   },
+   {
+    "name": "C1 measured share of the gap",
+    "value": 1.0,
+    "unit": "ratio",
+    "period": "valuation",
+    "source": "scores:what_if.C1.share_of_gap_measured"
+   },
+   {
+    "name": "Total if C1 is supported",
+    "value": 66.15,
+    "unit": "points",
+    "period": "as of",
+    "source": "scores:what_if.C1.total_if_supported"
+   },
+   {
+    "name": "TTM operating margin",
+    "value": 74.586,
+    "unit": "%",
+    "period": "TTM to Aug 2026",
+    "source": "facts:derived.ttm.operating_margin"
+   },
+   {
+    "name": "Own median annual operating margin FY2017-FY2026",
+    "value": 27.645,
+    "unit": "%",
+    "period": "FY2017-FY2026",
+    "source": "calc:({valuation.inputs.own_margins_10y.8}+{valuation.inputs.own_margins_10y.0})/2"
+   },
+   {
+    "name": "Industry mature operating margin (Track B target)",
+    "value": 17.98,
+    "unit": "%",
+    "period": "valuation",
+    "source": "facts:valuation.inputs.industry_mature_margin"
+   },
+   {
+    "name": "Operating margin FY2018 (previous peak)",
+    "value": 49.34,
+    "unit": "%",
+    "period": "FY2018",
+    "source": "facts:financials_annual.2018-08-31.operating_margin"
+   },
+   {
+    "name": "Gross margin FY2018",
+    "value": 58.87,
+    "unit": "%",
+    "period": "FY2018",
+    "source": "facts:financials_annual.2018-08-31.gross_margin"
+   },
+   {
+    "name": "Operating margin FY2023 (trough)",
+    "value": -36.97,
+    "unit": "%",
+    "period": "FY2023",
+    "source": "facts:financials_annual.2023-08-31.operating_margin"
+   },
+   {
+    "name": "Revenue growth FY2023",
+    "value": -49.477,
+    "unit": "%",
+    "period": "FY2023",
+    "source": "facts:derived.revenue_growth_by_year.2023"
+   },
+   {
+    "name": "Implied 10-year revenue growth (Track B)",
+    "value": 17.22,
+    "unit": "%",
+    "period": "10y",
+    "source": "facts:valuation.expectations.implied_growth_10y"
+   },
+   {
+    "name": "Implied growth with today's margin held",
+    "value": -4.16,
+    "unit": "%",
+    "period": "10y",
+    "source": "facts:valuation.expectations.implied_growth_10y_track_a"
+   },
+   {
+    "name": "Share of comparables achieving the implied growth (at most)",
+    "value": 5.0,
+    "unit": "%",
+    "period": "10y",
+    "source": "facts:valuation.expectations.share_of_comparables_achieving"
+   },
+   {
+    "name": "Comparables in the base-rate cell",
+    "value": 1375.0,
+    "unit": "count",
+    "period": "10y",
+    "source": "facts:valuation.expectations.comparables_n"
+   },
+   {
+    "name": "EV/EBIT at the valuation price on TTM operating income",
+    "value": 7.45,
+    "unit": "x",
+    "period": "TTM",
+    "source": "calc:{valuation.inputs.enterprise_value}/{derived.ttm.operating_income}"
+   },
+   {
+    "name": "Own EV/EBIT median",
+    "value": 14.13,
+    "unit": "x",
+    "period": "Nov 2021 to Aug 2026",
+    "source": "facts:derived.ev_ebit_history.median"
+   },
+   {
+    "name": "Own EV/EBIT 25th percentile",
+    "value": 10.23,
+    "unit": "x",
+    "period": "Nov 2021 to Aug 2026",
+    "source": "facts:derived.ev_ebit_history.p25"
+   },
+   {
+    "name": "Own EV/EBIT 75th percentile",
+    "value": 18.85,
+    "unit": "x",
+    "period": "Nov 2021 to Aug 2026",
+    "source": "facts:derived.ev_ebit_history.p75"
+   },
+   {
+    "name": "Own EV/EBIT minimum",
+    "value": 6.19,
+    "unit": "x",
+    "period": "Nov 2021 to Aug 2026",
+    "source": "facts:derived.ev_ebit_history.min"
+   },
+   {
+    "name": "Own EV/EBIT maximum (trough earnings)",
+    "value": 85.51,
+    "unit": "x",
+    "period": "Nov 2021 to Aug 2026",
+    "source": "facts:derived.ev_ebit_history.max"
+   },
+   {
+    "name": "Own EV/EBIT quarter-ends in the history",
+    "value": 15,
+    "unit": "count",
+    "period": "Nov 2021 to Aug 2026",
+    "source": "facts:derived.ev_ebit_history.n"
+   },
+   {
+    "name": "TTM operating income",
+    "value": 99.34,
+    "unit": "USD bn",
+    "period": "TTM to Aug 2026",
+    "source": "facts:derived.ttm.operating_income"
+   },
+   {
+    "name": "Operating income, quarter to 31 Aug 2026",
+    "value": 43.751,
+    "unit": "USD bn",
+    "period": "Q4 FY2026",
+    "source": "facts:financials_quarterly.2026-08-31.operating_income"
+   },
+   {
+    "name": "Operating margin, quarter to 31 Aug 2026",
+    "value": 80.68,
+    "unit": "%",
+    "period": "Q4 FY2026",
+    "source": "facts:financials_quarterly.2026-08-31.operating_margin"
+   },
+   {
+    "name": "Consensus revenue FY2028",
+    "value": 319.68,
+    "unit": "USD bn",
+    "period": "FY2028",
+    "source": "facts:estimates.trend.2028-08-31.revenueEstimateAvg"
+   },
+   {
+    "name": "TTM operating cash flow less capex",
+    "value": 58.963,
+    "unit": "USD bn",
+    "period": "TTM to Aug 2026",
+    "source": "calc:{derived.ttm.ocf}-{derived.ttm.capex}"
+   },
+   {
+    "name": "Base case free cash flow to the firm, year 1",
+    "value": 26.495,
+    "unit": "USD bn",
+    "period": "year 1",
+    "source": "facts:valuation.cases.base.path.0.fcff"
+   },
+   {
+    "name": "Tax rate in the valuation",
+    "value": 21.04,
+    "unit": "%",
+    "period": "valuation",
+    "source": "facts:valuation.inputs.tax_rate"
+   },
+   {
+    "name": "Long-term marketable investments left out of net cash",
+    "value": 30.019,
+    "unit": "USD bn",
+    "period": "3 Sep 2026",
+    "source": "tickers/MU.US/cache/sections/0000723125-26-000023_8.txt"
+   },
+   {
+    "name": "Remaining performance obligations at minimum pricing",
+    "value": 134,
+    "unit": "USD bn",
+    "period": "3 Sep 2026",
+    "source": "tickers/MU.US/cache/sections/0000723125-26-000023_8.txt"
+   },
+   {
+    "name": "Customer deposits under strategic agreements",
+    "value": 12.75,
+    "unit": "USD bn",
+    "period": "FY2026",
+    "source": "tickers/MU.US/cache/sections/0000723125-26-000023_7.txt"
+   },
+   {
+    "name": "Letters of credit backing strategic agreements",
+    "value": 7,
+    "unit": "USD bn",
+    "period": "3 Sep 2026",
+    "source": "tickers/MU.US/cache/sections/0000723125-26-000023_7.txt"
+   },
+   {
+    "name": "Net cash, all marketable investments less all debt incl. leases (approximate)",
+    "value": 68.27,
+    "unit": "USD bn",
+    "period": "3 Sep 2026",
+    "source": "dossier:figures.66.value"
+   },
+   {
+    "name": "Capex guidance, first half FY2027 (net of incentives)",
+    "value": 25,
+    "unit": "USD bn",
+    "period": "H1 FY2027",
+    "source": "tickers/MU.US/cache/sections/0000723125-26-000023_7.txt"
+   },
+   {
+    "name": "Insider sale value in 12 months",
+    "value": 338.53,
+    "unit": "USD m",
+    "period": "12m",
+    "source": "facts:ownership.insiders.sale_value_12m"
+   },
+   {
+    "name": "Insider purchase value in 12 months",
+    "value": 7.8217,
+    "unit": "USD m",
+    "period": "12m",
+    "source": "facts:ownership.insiders.purchase_value_12m"
+   },
+   {
+    "name": "US 10-year yield (M1)",
+    "value": 4.867,
+    "unit": "%",
+    "period": "6 Nov 2026",
+    "source": "facts:macro.US10Y.latest"
+   },
+   {
+    "name": "CMDI investment grade (M2)",
+    "value": 0.25,
+    "unit": "points",
+    "period": "23 Oct 2026",
+    "source": "facts:macro.CMDI_IG.latest"
+   },
+   {
+    "name": "XSD 4-week flow",
+    "value": -7.76,
+    "unit": "%",
+    "period": "4 weeks to 30 Oct 2026",
+    "source": "facts:map.tier.overlay.baskets.1.flow_4w_pct_aum"
+   },
+   {
+    "name": "XLK 4-week flow",
+    "value": 1.38,
+    "unit": "%",
+    "period": "4 weeks to 30 Oct 2026",
+    "source": "facts:map.tier.overlay.baskets.0.flow_4w_pct_aum"
+   }
+  ]
+ }
+}

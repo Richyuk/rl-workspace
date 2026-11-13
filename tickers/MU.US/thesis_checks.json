@@ -1,0 +1,29 @@
+{
+ "key": "MU.US",
+ "pass": true,
+ "failures": [],
+ "claims_version": 2,
+ "claims_sha256": "b7049135259f63db6fec12120dfc69a0ae5cd2766b6f45cf198ccf550c1202c5",
+ "dossier_commit": "2ab7741a44d282b9522c139074062f0f3ad6cd5c",
+ "shares_of_gap": {
+  "C1": 1.0,
+  "C2": 0.05,
+  "C3": 0.15
+ },
+ "attempts": [
+  {
+   "time_london": "2026-11-07T15:33:44+00:00",
+   "pass": true,
+   "failures": [],
+   "claims_version": 1,
+   "claims_sha256": "ac3249f52844aec071e2e2218bc0af7e3e25aff4bc8a2cf0a87db79152f53184"
+  },
+  {
+   "time_london": "2026-11-07T15:34:23+00:00",
+   "pass": true,
+   "failures": [],
+   "claims_version": 2,
+   "claims_sha256": "b7049135259f63db6fec12120dfc69a0ae5cd2766b6f45cf198ccf550c1202c5"
+  }
+ ]
+}

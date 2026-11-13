@@ -1,0 +1,944 @@
+{
+ "schema_version": "1.0",
+ "key": "MU.US",
+ "run_id": "2026-11-07-semis",
+ "as_of": "2026-11-07",
+ "started_at_commit": "2ab7741a44d282b9522c139074062f0f3ad6cd5c",
+ "summary": "Caution, not avoid. FY2026 operating margin of 74.6% came from price (DRAM ASP up about 180% on bits up about 25%) against a previous peak of 49.3% and a FY2023 trough of -37.0%. A 50% fall from $690 needs only about $24.7bn of operating income at the own median 14.1 times EV/EBIT: 25% of FY2026's, or an 18.6% margin on FY2026 revenue. In 2022-23 trailing EBIT fell 81% in three quarters from a 7.1 times multiple like today's 7.4. Against that, the stock is already 43% below its June high at 3.9 times consensus FY2027 EPS, and $134bn of take-or-pay obligations exist. No single objection is decisive at this price; size small and date the position to the 16 Dec 2026 results.",
+ "pre_mortem": {
+  "scenario": "The stock halves to about $345 by November 2028 because the shortage price that produced a 74.6% operating margin unwinds as supply from Samsung, CXMT and Micron's own new fabs arrives while data-centre spending digests. At that price the market is paying the own median EV/EBIT multiple for operating income of about $24.7bn, an 18.6% margin on FY2026 revenue, which is the industry median margin and still 2.5 times FY2025's operating income.",
+  "path": [
+   {
+    "when": "Dec 2026 to Feb 2027",
+    "step": "The November-quarter results (due 16 Dec 2026) show growth slowing: consensus has revenue of $61.7bn, 13.9% above the August quarter against 31% last quarter. Hyperscaler capex caution after the US midterms and the Taiwan labour dispute keep the stock de-rating from a base of 83% volatility; the multiple stays near 7 times EBIT because earnings are expected to fall.",
+    "sources": [
+     "dossier:figures.117.value",
+     "dossier:figures.21.value",
+     "dossier:figures.102.value",
+     "dossier:expectations.reading"
+    ]
+   },
+   {
+    "when": "Mar to Aug 2027",
+    "step": "Contract price growth stalls and then turns negative as Samsung's HBM share (33% in Q2 2026, 40% targeted by Q4) and CXMT (about 10% of DRAM revenue) add supply and Micron's Idaho fab makes its first wafers in mid-2027. The strategic agreements are estimated at over 35% of revenue through 2030, so most sales still follow market prices. Consensus FY2027 EPS of $176.50 is cut and the quarterly operating margin falls from 80.7% into the 60s.",
+    "sources": [
+     "dossier:figures.171.value",
+     "dossier:figures.175.value",
+     "dossier:figures.179.value",
+     "dossier:figures.113.value",
+     "dossier:figures.22.value",
+     "dossier:expectations.what_would_change_it"
+    ]
+   },
+   {
+    "when": "Sep 2027 to Mar 2028",
+    "step": "FY2028 starts with capex of about $25bn in the first half of FY2027 already spent into a flattening market. Customers press for price-protection and pricing adjustments (already $4.3bn of consideration payable to customers), receivables of $36.2bn are slow to collect, and a Taiwan wage settlement (a union demand of 15% of operating profit) lifts cost per bit. Operating margin heads to the 2018 peak of 49% and below, and consensus FY2028 revenue of $319.7bn is cut.",
+    "sources": [
+     "dossier:figures.63.value",
+     "dossier:figures.56.value",
+     "dossier:figures.54.value",
+     "dossier:figures.116.value",
+     "dossier:figures.15.value",
+     "dossier:business.cyclicality"
+    ]
+   },
+   {
+    "when": "Apr to Nov 2028",
+    "step": "Operating income reaches about $25bn to $34bn, the level at which 14.1 to 10.2 times EV/EBIT equals $345, and the market stops looking through the trough. 2022-23 is the precedent: trailing EBIT fell 81% in three quarters, and memory stocks fell 60-80% from peak to trough in past cycles, which for this stock is 72% below the June 2026 close high.",
+    "sources": [
+     "calc:({valuation.inputs.price_trading}*0.5*{valuation.inputs.shares}+{valuation.inputs.net_debt})/{derived.ev_ebit_history.median}",
+     "calc:({valuation.inputs.price_trading}*0.5*{valuation.inputs.shares}+{valuation.inputs.net_debt})/{derived.ev_ebit_history.p25}",
+     "calc:{derived.ev_ebit_history.quarters.2023-02-28.ttm_ebit}/{derived.ev_ebit_history.quarters.2022-05-31.ttm_ebit}-1",
+     "calc:(1+{market.drawdown_from_peak_close})*0.5-1",
+     "https://www.uncoveralpha.com/p/every-memory-cycle-ends-the-same"
+    ]
+   }
+  ],
+  "leading_indicators": [
+   {
+    "metric": "Quarterly operating margin (80.7% in the August 2026 quarter) falls below 70%",
+    "metric_ref": "facts:financials_quarterly.2026-08-31.operating_margin",
+    "operator": "<",
+    "threshold": 0.7,
+    "sources": [
+     "dossier:figures.22.value"
+    ]
+   },
+   {
+    "metric": "Consensus FY2027 EPS in dollars (176.50 now; 153.87 ninety days ago) cut below 150",
+    "metric_ref": "facts:estimates.trend.2027-08-31.earningsEstimateAvg",
+    "operator": "<",
+    "threshold": 150,
+    "sources": [
+     "dossier:figures.113.value"
+    ]
+   },
+   {
+    "metric": "Samsung's HBM revenue share in % (33% in Q2 2026; Samsung says about 40% by Q4) reaches 40 while Micron's stays near 18",
+    "operator": ">=",
+    "threshold": 40,
+    "sources": [
+     "dossier:figures.171.value",
+     "dossier:figures.172.value"
+    ]
+   },
+   {
+    "metric": "DRAM contract price change quarter on quarter in % (one source forecast 0 to +5% for Q4 2026) turns negative",
+    "operator": "<",
+    "threshold": 0,
+    "sources": [
+     "dossier:expectations.what_would_change_it"
+    ]
+   },
+   {
+    "metric": "Sequential revenue growth in % in the November 2026 quarter (13.9% in consensus) comes in below 5",
+    "operator": "<",
+    "threshold": 5,
+    "sources": [
+     "calc:{estimates.trend.2026-11-30.revenueEstimateAvg}/{financials_quarterly.2026-08-31.revenue}-1"
+    ]
+   }
+  ]
+ },
+ "base_rates": [
+  {
+   "statement": "Growth: the price implies 17.2% revenue growth a year for ten years with the margin fading to the industry median of 18.0%, and at most 5% of 1,375 comparables (all industries, USD 50bn and above) grew that fast. Micron's own 2016-2026 CAGR of 26.8% starts at a trough and ends in the price spike.",
+   "source": "facts:valuation.expectations.implied_growth_10y"
+  },
+  {
+   "statement": "Margin: FY2026's 74.6% operating margin compares with 49.3% in FY2018, the previous peak; the other eight of the last nine years ran from -37.0% (FY2023) to 31.5% (FY2021). The industry median the valuation fades to is 18.0%.",
+   "source": "facts:valuation.inputs.own_margins_10y.1"
+  },
+  {
+   "statement": "Multiple: EV/EBIT is 7.45 times trailing against an own median of 14.13, a 25th percentile of 10.23 and a minimum of 6.19. A low multiple on peak earnings has not protected the stock: at 7.14 times in May 2022 trailing EBIT was $11.1bn and nine months later it was $2.1bn.",
+   "source": "facts:derived.ev_ebit_history.quarters.2022-05-31.ev_ebit"
+  },
+  {
+   "statement": "Peak-to-trough: Micron fell about 57% from roughly $64 in May 2018 (4.5 times forward earnings) to about $28 at the end of 2018, and a review of memory cycles puts peak-to-trough stock declines at 60-80% over about two years. A further 50% fall from $690 would be 71.6% below the June 2026 high, inside that range.",
+   "source": "https://www.trefis.com/stock/mu/articles/599100/micron-stock-surged-9x-but-history-suggests-caution/2026-05-12"
+  },
+  {
+   "statement": "Revenue: it fell 23.0% in FY2019 and 49.5% in FY2023, the two most recent downturns. Consensus FY2027 revenue of $275.5bn is 2.07 times FY2026's, so the Street needs a second doubling.",
+   "source": "facts:derived.revenue_growth_by_year.2023"
+  }
+ ],
+ "failure_cases": [
+  {
+   "company": "Micron Technology (the 2018 DRAM and NAND peak)",
+   "period": "May 2018 to FY2019",
+   "what_happened": "FY2018 revenue rose to $30.4bn and the operating margin to 49.3% on DRAM and NAND shortage prices, and the stock peaked near $64 in May 2018 at about 4.5 times forward earnings, about two quarters before the fundamentals peaked. Cloud customers then cut orders; NAND prices fell about 60% and DRAM about 40%, FY2019 revenue fell 23% and EPS fell 52%, and the stock was near $28 by year end, down about 57%.",
+   "similarity": "Same company and product set at a shortage-driven peak margin, an AI-like customer-capex story (cloud build-out), a three-supplier industry that was supposed to be disciplined, and a low forward multiple that the market read as a peak. Differences: FY2026's margin and revenue jump are far larger, and the 2026 take-or-pay agreements did not exist in 2018.",
+   "lesson": "A forward multiple below 5 times is what the market pays for peak-cycle earnings, not a margin of safety; the stock fell before earnings did and the fall was larger than the first revisions implied. Watch contract pricing and customer inventories, not the trailing multiple.",
+   "sources": [
+    "https://www.trefis.com/stock/mu/articles/599100/micron-stock-surged-9x-but-history-suggests-caution/2026-05-12",
+    "https://www.uncoveralpha.com/p/every-memory-cycle-ends-the-same",
+    "https://www.stocktitan.net/articles/micron-q4-fy2026-earnings-memory-cycle",
+    "https://www.forbes.com/sites/greatspeculations/2019/10/30/after-growing-almost-15x-yoy-in-2018-why-did-microns-revenue-drop-23-in-2019/"
+   ]
+  },
+  {
+   "company": "Elpida Memory",
+   "period": "2006-07 capacity build to bankruptcy in February 2012",
+   "what_happened": "Elpida, a top-three DRAM maker, invested aggressively in 2006-07 on the bet that the market would keep expanding. DRAM prices fell sharply in 2009 and again in 2011 (the benchmark 2-gigabit DDR3 chip fell 85%); with a strong yen and Thai floods it filed for bankruptcy with liabilities of 448 billion yen ($5.5bn). Micron bought it in 2013.",
+   "similarity": "A DRAM maker with a large capex programme committed at a high point in the price cycle (Micron: $30.7bn in FY2026, about $25bn guided for the first half of FY2027, with fabs in Idaho, New York, Japan, Singapore and Taiwan) in an industry where Chinese state-backed supply is growing. Differences: Elpida was levered and sub-scale at about 15-18% share, while Micron has net cash of about $41bn on the cache basis, so the comparison is about capex timing and price collapse, not about solvency.",
+   "lesson": "Memory capacity bought at peak prices is paid for in the downturn, and a company can be a top-three producer and still not earn its cost of capital through the cycle. For Micron the equivalent loss is not bankruptcy but returns: ROIC was 1.0% in FY2016, -9.5% in FY2023 and 1.8% in FY2024.",
+   "sources": [
+    "https://phys.org/news/2012-03-japan-elpida-delisted-tokyo-stock.html",
+    "https://www.networkworld.com/article/706324/data-center-elpida-world-s-third-largest-dram-maker-files-for-bankruptcy.html",
+    "https://en.wikipedia.org/wiki/Micron_Memory_Japan",
+    "dossier:figures.26.value"
+   ]
+  }
+ ],
+ "objections": [
+  {
+   "id": "R1",
+   "topic": "margin",
+   "severity": "severe",
+   "statement": "Earnings are a shortage price. FY2026's operating margin of 74.6% followed 26.4% in FY2025 and -37.0% in FY2023, against a previous peak of 49.3%; DRAM ASP rose about 180% and NAND about 200% on DRAM bits up about 25%. The 10-K says AI-driven demand 'may not be sustainable' and the strategic agreements are estimated at over 35% of revenue through 2030, so most revenue floats. A 50% fall needs only an 18.6% margin on flat revenue at the own median multiple.",
+   "metric": "Operating margin FY2026",
+   "metric_ref": "facts:financials_annual.2026-08-31.operating_margin",
+   "sources": [
+    "dossier:figures.12.value",
+    "dossier:figures.13.value",
+    "dossier:figures.14.value",
+    "dossier:figures.15.value",
+    "dossier:figures.34.value",
+    "dossier:figures.36.value",
+    "dossier:figures.179.value",
+    "dossier:business.cyclicality",
+    "calc:({valuation.inputs.price_trading}*0.5*{valuation.inputs.shares}+{valuation.inputs.net_debt})/{derived.ev_ebit_history.median}/{financials_annual.2026-08-31.revenue}"
+   ]
+  },
+  {
+   "id": "R2",
+   "topic": "multiple",
+   "severity": "moderate",
+   "statement": "The price is not cheap against the valuation's own lines. At $690 it is 23.0% above the buy-below line of $560.94 and the base-case DCF value is $728.75 (the price is 5.3% under it), with a base-case return of 7.5% a year on the DCF exit; the reverse DCF needs 17.2% growth a year for ten years, a rate at most 5% of 1,375 comparables achieved. Cash is also not all free: $12.75bn of customer deposits are owed back in 2029-2031 and noncurrent tax payables are rising.",
+   "metric": "EV/EBIT at the valuation price",
+   "metric_ref": "facts:derived.ev_ebit_history.latest_ev_ebit",
+   "sources": [
+    "facts:valuation.price_lines_trading.buy_below",
+    "facts:valuation.cases.base.dcf_value_per_share_trading",
+    "dossier:figures.136.value",
+    "dossier:figures.123.value",
+    "dossier:figures.126.value",
+    "dossier:figures.127.value",
+    "dossier:figures.41.value",
+    "calc:{valuation.inputs.price_trading}/{valuation.price_lines_trading.buy_below}-1"
+   ]
+  },
+  {
+   "id": "R3",
+   "topic": "competition",
+   "severity": "moderate",
+   "statement": "Supply is being added at the top of the cycle by every producer. Micron's capex was $30.7bn in FY2026 and is guided to about $25bn in the first half of FY2027 net of incentives; Samsung's HBM revenue share rose from 21% to 33% in a quarter while Micron's was 18% (SK hynix 50%); CXMT is about 10% of DRAM revenue and state-backed. A review of past cycles finds oversupply tends to arise within two to three years when all three majors expand together.",
+   "sources": [
+    "dossier:figures.59.value",
+    "dossier:figures.63.value",
+    "dossier:figures.173.value",
+    "dossier:figures.171.value",
+    "dossier:figures.172.value",
+    "dossier:figures.170.value",
+    "dossier:figures.175.value",
+    "https://www.forbes.com/sites/greatspeculations/2026/05/14/why-micron-stocks-9x-rally-might-just-be-the-start/"
+   ]
+  },
+  {
+   "id": "R4",
+   "topic": "growth",
+   "severity": "moderate",
+   "statement": "Demand is concentrated and the Street needs another doubling. About 60% of FY2026 revenue was data centre and about half came from ten customers, both new risk factors; consensus FY2027 revenue of $275.5bn is 2.07 times FY2026's, while consensus for the November quarter is only 13.9% above the August quarter. The 17.5% one-day fall on 5 Nov 2026 was attributed to fears of slower data-centre build-outs.",
+   "sources": [
+    "dossier:figures.37.value",
+    "dossier:figures.38.value",
+    "dossier:figures.115.value",
+    "dossier:figures.0.value",
+    "calc:{estimates.trend.2026-11-30.revenueEstimateAvg}/{financials_quarterly.2026-08-31.revenue}-1",
+    "dossier:figures.167.value"
+   ]
+  },
+  {
+   "id": "R5",
+   "topic": "capital_allocation",
+   "severity": "moderate",
+   "statement": "Through-cycle returns are a commodity's, and spending follows the price. ROIC was 1.0% in FY2016, -9.5% in FY2023 and 1.8% in FY2024 against 110.5% in FY2026. In 2017-2025 operating cash flow less capex was only $15.9bn on about $86.4bn of capex; FY2026 alone had $59.0bn, and the next fabs (Idaho, New York, Hiroshima, Singapore, Tongluo) are being committed at today's price level.",
+   "metric": "ROIC FY2026",
+   "metric_ref": "facts:derived.roic_by_year.2026",
+   "sources": [
+    "dossier:figures.27.value",
+    "dossier:figures.26.value",
+    "dossier:figures.25.value",
+    "dossier:figures.24.value",
+    "dossier:figures.70.value",
+    "dossier:figures.61.value",
+    "calc:{derived.sum_2017_2026.capex}-{derived.ttm.capex}"
+   ]
+  },
+  {
+   "id": "R6",
+   "topic": "other",
+   "severity": "moderate",
+   "statement": "Taiwan makes about 60% of Micron's DRAM, and a Taoyuan union held a warning strike on 22 Oct 2026 and demands 15% of operating profit. Bloomberg reported on 5 Nov that Fab 11E construction (up to $4.5bn) was halted, though Micron says Taiwan operations are normal. The 10-K added strike and stoppage risk factors, including liability under the strategic agreements if deliveries stop; a settlement sets a precedent for cost per bit.",
+   "sources": [
+    "dossier:figures.176.value",
+    "dossier:figures.177.value",
+    "dossier:figures.178.value",
+    "dossier:moat.against"
+   ]
+  }
+ ],
+ "strongest_objection": "R1",
+ "flag_responses": [
+  {
+   "flag": "falling_sharply",
+   "kind": "falling_sharply",
+   "response": "The stock is 43.1% below its 25 Jun 2026 closing high of $1,213.56 and fell 17.5% on 5 Nov 2026, with one-year volatility of 83%. Press attributes the fall to the US midterms, data-centre build-out fears, the Fab 11E report and a chip-sector sell-off; none is a reported change in Micron's results, and the August quarter's operating margin was 80.7%, so the fall is not explained by a fundamental event yet. That is the bear's point: in 2018 the stock peaked about two quarters before fundamentals, and the June 2026 high may be the same lead. The guided slowdown in sequential growth supports reading the fall as the market looking ahead, not noise.",
+   "verdict": "real_risk",
+   "sources": [
+    "facts:market.drawdown_from_peak_close",
+    "dossier:figures.167.value",
+    "dossier:figures.102.value",
+    "dossier:figures.22.value",
+    "https://www.uncoveralpha.com/p/every-memory-cycle-ends-the-same"
+   ]
+  }
+ ],
+ "macro_exposure": [
+  {
+   "series": "US10Y",
+   "latest": 4.867,
+   "risk_if": "rises above 5.5",
+   "rationale": "The valuation's discount rate of 9.37% is the US 10-year yield plus 4.5 points, so a rise lifts the rate applied to a stream whose value is mostly in later years; it is also the cost of financing hyperscaler data-centre capex, which is the demand for Micron's HBM and server DRAM. The yield rose 0.78 points in 12 months."
+  },
+  {
+   "series": "VIX",
+   "latest": 25.64,
+   "risk_if": "stays above 30",
+   "rationale": "A stock with 83% one-year volatility and a 17.5% one-day fall is sold first in a risk-off market; the VIX is already 6.1 points higher than a year ago, and AI-capex names fell together on 4-5 Nov 2026."
+  }
+ ],
+ "bear_verdict": "caution",
+ "gaps": [
+  "Governance test not triggered: facts.governance.events shows no CFO, chief accounting officer, auditor change or non-reliance event in 24 months; the only officer exit is Sumit Sadana (Chief Business Officer, to Senior Advisor, 26 Aug 2026), with no disagreement stated. No trap flag is at yes and the tier is not tagged crowded, so the only flag response is falling_sharply.",
+  "Failure-case facts come from secondary web pages (Trefis, Forbes, Phys.org, Network World, Wikipedia), not company filings; the 2018 forward P/E of 4.5 times and the 57% fall are Trefis's figures. Two of five web searches were used.",
+  "The valuation's base_rates cells give only the share of comparables reaching the implied growth; there is no margin or multiple distribution for the 1,375 comparables, so margin and multiple base rates rest on Micron's own history (about five cached price years for EV/EBIT).",
+  "The price lines and case returns come from code with the caveats in the dossier (reinvestment overstated in years 1-2, 21% tax rate against 14.8% effective, net cash leaving out $30.0bn of long-term investments). Fixing them would raise the DCF value, which is why R2 is moderate, not severe.",
+  "The facts pack's market block is the 30 Oct close ($884.74) while the valuation uses the 6 Nov close ($690); consensus estimates may not yet reflect the 5 Nov sell-off. The 2022-23 EBIT fall is from quarter-end TTM data and the 2018 timing from secondary sources.",
+  "Conversion to avoid: a November-quarter operating margin below 70%, or negative DRAM contract pricing in the first half of 2027, would make R1 decisive."
+ ],
+ "deviations": [],
+ "figures": [
+  {
+   "name": "Valuation price (6 Nov 2026 close)",
+   "value": 690,
+   "unit": "USD",
+   "period": "6 Nov 2026",
+   "source": "facts:valuation.inputs.price_trading"
+  },
+  {
+   "name": "Price after a 50% fall",
+   "value": 345,
+   "unit": "USD",
+   "period": "pre-mortem",
+   "source": "calc:{valuation.inputs.price_trading}*0.5"
+  },
+  {
+   "name": "Market value after a 50% fall",
+   "value": 390.3,
+   "unit": "USD bn",
+   "period": "pre-mortem",
+   "source": "calc:{valuation.inputs.price_trading}*0.5*{valuation.inputs.shares}"
+  },
+  {
+   "name": "Enterprise value after a 50% fall",
+   "value": 349.7,
+   "unit": "USD bn",
+   "period": "pre-mortem",
+   "source": "calc:({valuation.inputs.price_trading}*0.5*{valuation.inputs.shares}+{valuation.inputs.net_debt})"
+  },
+  {
+   "name": "Operating income that a 50% fall values at the own median multiple",
+   "value": 24.75,
+   "unit": "USD bn",
+   "period": "pre-mortem",
+   "source": "calc:({valuation.inputs.price_trading}*0.5*{valuation.inputs.shares}+{valuation.inputs.net_debt})/{derived.ev_ebit_history.median}"
+  },
+  {
+   "name": "Operating income at the own 25th percentile multiple",
+   "value": 34.18,
+   "unit": "USD bn",
+   "period": "pre-mortem",
+   "source": "calc:({valuation.inputs.price_trading}*0.5*{valuation.inputs.shares}+{valuation.inputs.net_debt})/{derived.ev_ebit_history.p25}"
+  },
+  {
+   "name": "That operating income as a share of FY2026's",
+   "value": 24.91,
+   "unit": "%",
+   "period": "pre-mortem",
+   "source": "calc:({valuation.inputs.price_trading}*0.5*{valuation.inputs.shares}+{valuation.inputs.net_debt})/{derived.ev_ebit_history.median}/{derived.ttm.operating_income}"
+  },
+  {
+   "name": "That operating income as a margin on FY2026 revenue",
+   "value": 18.58,
+   "unit": "%",
+   "period": "pre-mortem",
+   "source": "calc:({valuation.inputs.price_trading}*0.5*{valuation.inputs.shares}+{valuation.inputs.net_debt})/{derived.ev_ebit_history.median}/{financials_annual.2026-08-31.revenue}"
+  },
+  {
+   "name": "That operating income as a multiple of FY2025's",
+   "value": 2.51,
+   "unit": "x",
+   "period": "pre-mortem",
+   "source": "calc:({valuation.inputs.price_trading}*0.5*{valuation.inputs.shares}+{valuation.inputs.net_debt})/{derived.ev_ebit_history.median}/{derived.ev_ebit_history.quarters.2025-08-31.ttm_ebit}"
+  },
+  {
+   "name": "Drawdown from peak close today",
+   "value": -43.12,
+   "unit": "%",
+   "period": "6 Nov 2026",
+   "source": "facts:market.drawdown_from_peak_close"
+  },
+  {
+   "name": "Drawdown from peak close after a further 50% fall",
+   "value": -71.56,
+   "unit": "%",
+   "period": "pre-mortem",
+   "source": "calc:(1+{market.drawdown_from_peak_close})*0.5-1"
+  },
+  {
+   "name": "Own EV/EBIT median",
+   "value": 14.13,
+   "unit": "x",
+   "period": "2021-2026",
+   "source": "facts:derived.ev_ebit_history.median"
+  },
+  {
+   "name": "Own EV/EBIT 25th percentile",
+   "value": 10.23,
+   "unit": "x",
+   "period": "2021-2026",
+   "source": "facts:derived.ev_ebit_history.p25"
+  },
+  {
+   "name": "Own EV/EBIT minimum",
+   "value": 6.19,
+   "unit": "x",
+   "period": "2021-2026",
+   "source": "facts:derived.ev_ebit_history.min"
+  },
+  {
+   "name": "EV/EBIT at the valuation price",
+   "value": 7.45,
+   "unit": "x",
+   "period": "TTM",
+   "source": "dossier:figures.104.value"
+  },
+  {
+   "name": "EV/EBIT at 31 May 2022",
+   "value": 7.14,
+   "unit": "x",
+   "period": "May 2022",
+   "source": "facts:derived.ev_ebit_history.quarters.2022-05-31.ev_ebit"
+  },
+  {
+   "name": "Trailing EBIT at 31 May 2022",
+   "value": 11.14,
+   "unit": "USD bn",
+   "period": "TTM to May 2022",
+   "source": "facts:derived.ev_ebit_history.quarters.2022-05-31.ttm_ebit"
+  },
+  {
+   "name": "Trailing EBIT at 28 Feb 2023",
+   "value": 2.11,
+   "unit": "USD bn",
+   "period": "TTM to Feb 2023",
+   "source": "facts:derived.ev_ebit_history.quarters.2023-02-28.ttm_ebit"
+  },
+  {
+   "name": "Fall in trailing EBIT, May 2022 to Feb 2023",
+   "value": -81.05,
+   "unit": "%",
+   "period": "3 quarters",
+   "source": "calc:{derived.ev_ebit_history.quarters.2023-02-28.ttm_ebit}/{derived.ev_ebit_history.quarters.2022-05-31.ttm_ebit}-1"
+  },
+  {
+   "name": "Operating margin FY2026",
+   "value": 74.59,
+   "unit": "%",
+   "period": "FY2026",
+   "source": "facts:financials_annual.2026-08-31.operating_margin"
+  },
+  {
+   "name": "Operating margin FY2025",
+   "value": 26.41,
+   "unit": "%",
+   "period": "FY2025",
+   "source": "facts:financials_annual.2025-08-31.operating_margin"
+  },
+  {
+   "name": "Operating margin FY2023",
+   "value": -36.97,
+   "unit": "%",
+   "period": "FY2023",
+   "source": "facts:financials_annual.2023-08-31.operating_margin"
+  },
+  {
+   "name": "Operating margin FY2018 (previous peak)",
+   "value": 49.34,
+   "unit": "%",
+   "period": "FY2018",
+   "source": "facts:financials_annual.2018-08-31.operating_margin"
+  },
+  {
+   "name": "Operating margin FY2021 (highest of the other years)",
+   "value": 31.54,
+   "unit": "%",
+   "period": "FY2021",
+   "source": "facts:valuation.inputs.own_margins_10y.5"
+  },
+  {
+   "name": "Operating income FY2018",
+   "value": 14.99,
+   "unit": "USD bn",
+   "period": "FY2018",
+   "source": "facts:financials_annual.2018-08-31.operating_income"
+  },
+  {
+   "name": "Operating margin, quarter to 31 Aug 2026",
+   "value": 80.68,
+   "unit": "%",
+   "period": "Q4 FY2026",
+   "source": "facts:financials_quarterly.2026-08-31.operating_margin"
+  },
+  {
+   "name": "Industry mature operating margin (valuation target)",
+   "value": 17.98,
+   "unit": "%",
+   "period": "valuation",
+   "source": "facts:valuation.inputs.industry_mature_margin"
+  },
+  {
+   "name": "DRAM ASP change FY2026 (approximate)",
+   "value": 180,
+   "unit": "%",
+   "period": "FY2026",
+   "source": "dossier:figures.34.value"
+  },
+  {
+   "name": "NAND ASP change FY2026 (approximate)",
+   "value": 200,
+   "unit": "%",
+   "period": "FY2026",
+   "source": "dossier:figures.36.value"
+  },
+  {
+   "name": "DRAM bit shipment change FY2026 (approximate)",
+   "value": 25,
+   "unit": "%",
+   "period": "FY2026",
+   "source": "dossier:figures.35.value"
+  },
+  {
+   "name": "Strategic agreements, share of revenue through 2030 (estimate)",
+   "value": 35,
+   "unit": "%",
+   "period": "to 2030",
+   "source": "dossier:figures.179.value"
+  },
+  {
+   "name": "Revenue FY2026",
+   "value": 133.19,
+   "unit": "USD bn",
+   "period": "FY2026",
+   "source": "facts:financials_annual.2026-08-31.revenue"
+  },
+  {
+   "name": "Revenue growth FY2019",
+   "value": -22.98,
+   "unit": "%",
+   "period": "FY2019",
+   "source": "facts:derived.revenue_growth_by_year.2019"
+  },
+  {
+   "name": "Revenue growth FY2023",
+   "value": -49.48,
+   "unit": "%",
+   "period": "FY2023",
+   "source": "facts:derived.revenue_growth_by_year.2023"
+  },
+  {
+   "name": "Revenue CAGR 2016-2026",
+   "value": 26.8,
+   "unit": "%",
+   "period": "2016-2026",
+   "source": "facts:derived.revenue_cagr_2016_2026"
+  },
+  {
+   "name": "Implied 10-year revenue growth in the price",
+   "value": 17.22,
+   "unit": "%",
+   "period": "valuation",
+   "source": "facts:valuation.expectations.implied_growth_10y"
+  },
+  {
+   "name": "Share of comparables achieving that growth (at most)",
+   "value": 5,
+   "unit": "%",
+   "period": "valuation",
+   "source": "facts:valuation.expectations.share_of_comparables_achieving"
+  },
+  {
+   "name": "Comparables in the base-rate cell",
+   "value": 1375,
+   "unit": "count",
+   "period": "valuation",
+   "source": "facts:valuation.expectations.comparables_n"
+  },
+  {
+   "name": "Price line: full size below",
+   "value": 491.49,
+   "unit": "USD",
+   "period": "valuation",
+   "source": "facts:valuation.price_lines_trading.full_size_below"
+  },
+  {
+   "name": "Price line: buy below",
+   "value": 560.94,
+   "unit": "USD",
+   "period": "valuation",
+   "source": "facts:valuation.price_lines_trading.buy_below"
+  },
+  {
+   "name": "Price above the buy-below line",
+   "value": 23.01,
+   "unit": "%",
+   "period": "6 Nov 2026",
+   "source": "calc:{valuation.inputs.price_trading}/{valuation.price_lines_trading.buy_below}-1"
+  },
+  {
+   "name": "Base case DCF value per share",
+   "value": 728.75,
+   "unit": "per share",
+   "period": "valuation",
+   "source": "facts:valuation.cases.base.dcf_value_per_share_trading"
+  },
+  {
+   "name": "Price against the base case DCF value",
+   "value": -5.32,
+   "unit": "%",
+   "period": "6 Nov 2026",
+   "source": "calc:{valuation.inputs.price_trading}/{valuation.cases.base.dcf_value_per_share_trading}-1"
+  },
+  {
+   "name": "Base case implied 5-year annual return, DCF exit",
+   "value": 7.46,
+   "unit": "%",
+   "period": "valuation",
+   "source": "facts:valuation.cases.base.implied_return_5y"
+  },
+  {
+   "name": "Consensus revenue FY2027",
+   "value": 275.51,
+   "unit": "USD bn",
+   "period": "FY2027",
+   "source": "facts:estimates.trend.2027-08-31.revenueEstimateAvg"
+  },
+  {
+   "name": "Consensus revenue FY2027 over FY2026",
+   "value": 2.07,
+   "unit": "x",
+   "period": "FY2027",
+   "source": "calc:{estimates.trend.2027-08-31.revenueEstimateAvg}/{financials_annual.2026-08-31.revenue}"
+  },
+  {
+   "name": "Consensus revenue FY2028",
+   "value": 319.68,
+   "unit": "USD bn",
+   "period": "FY2028",
+   "source": "facts:estimates.trend.2028-08-31.revenueEstimateAvg"
+  },
+  {
+   "name": "Consensus revenue, November 2026 quarter",
+   "value": 61.74,
+   "unit": "USD bn",
+   "period": "Q1 FY2027",
+   "source": "facts:estimates.trend.2026-11-30.revenueEstimateAvg"
+  },
+  {
+   "name": "Revenue, quarter to 31 Aug 2026",
+   "value": 54.23,
+   "unit": "USD bn",
+   "period": "Q4 FY2026",
+   "source": "facts:financials_quarterly.2026-08-31.revenue"
+  },
+  {
+   "name": "Consensus sequential revenue growth, November 2026 quarter",
+   "value": 13.86,
+   "unit": "%",
+   "period": "Q1 FY2027",
+   "source": "calc:{estimates.trend.2026-11-30.revenueEstimateAvg}/{financials_quarterly.2026-08-31.revenue}-1"
+  },
+  {
+   "name": "Consensus EPS FY2027",
+   "value": 176.5,
+   "unit": "per share",
+   "period": "FY2027",
+   "source": "facts:estimates.trend.2027-08-31.earningsEstimateAvg"
+  },
+  {
+   "name": "EPS FY2027 consensus 90 days ago",
+   "value": 153.87,
+   "unit": "per share",
+   "period": "90 days earlier",
+   "source": "facts:estimates.trend.2027-08-31.epsTrend90daysAgo"
+  },
+  {
+   "name": "Price over FY2027 consensus EPS",
+   "value": 3.91,
+   "unit": "x",
+   "period": "FY2027",
+   "source": "dossier:figures.112.value"
+  },
+  {
+   "name": "Capex FY2026 (gross)",
+   "value": 30.71,
+   "unit": "USD bn",
+   "period": "FY2026",
+   "source": "facts:financials_annual.2026-08-31.capex"
+  },
+  {
+   "name": "Capex guidance, first half FY2027 (net of incentives)",
+   "value": 25,
+   "unit": "USD bn",
+   "period": "H1 FY2027",
+   "source": "dossier:figures.63.value"
+  },
+  {
+   "name": "Capex 2017-2025",
+   "value": 86.43,
+   "unit": "USD bn",
+   "period": "2017-2025",
+   "source": "calc:{derived.sum_2017_2026.capex}-{derived.ttm.capex}"
+  },
+  {
+   "name": "Operating cash flow less capex 2017-2025",
+   "value": 15.86,
+   "unit": "USD bn",
+   "period": "2017-2025",
+   "source": "dossier:figures.70.value"
+  },
+  {
+   "name": "Operating cash flow less capex FY2026",
+   "value": 58.96,
+   "unit": "USD bn",
+   "period": "FY2026",
+   "source": "dossier:figures.61.value"
+  },
+  {
+   "name": "ROIC FY2026",
+   "value": 110.54,
+   "unit": "%",
+   "period": "FY2026",
+   "source": "facts:derived.roic_by_year.2026"
+  },
+  {
+   "name": "ROIC FY2024",
+   "value": 1.76,
+   "unit": "%",
+   "period": "FY2024",
+   "source": "facts:derived.roic_by_year.2024"
+  },
+  {
+   "name": "ROIC FY2023",
+   "value": -9.52,
+   "unit": "%",
+   "period": "FY2023",
+   "source": "facts:derived.roic_by_year.2023"
+  },
+  {
+   "name": "ROIC FY2016",
+   "value": 0.96,
+   "unit": "%",
+   "period": "FY2016",
+   "source": "facts:derived.roic_by_year.2016"
+  },
+  {
+   "name": "Customer deposits received FY2026",
+   "value": 12.75,
+   "unit": "USD bn",
+   "period": "FY2026",
+   "source": "dossier:figures.41.value"
+  },
+  {
+   "name": "Remaining performance obligations",
+   "value": 134,
+   "unit": "USD bn",
+   "period": "3 Sep 2026",
+   "source": "dossier:figures.39.value"
+  },
+  {
+   "name": "Consideration payable to customers",
+   "value": 4.32,
+   "unit": "USD bn",
+   "period": "3 Sep 2026",
+   "source": "dossier:figures.56.value"
+  },
+  {
+   "name": "Receivables at 3 Sep 2026",
+   "value": 36.2,
+   "unit": "USD bn",
+   "period": "3 Sep 2026",
+   "source": "facts:financials_annual.2026-08-31.receivables"
+  },
+  {
+   "name": "Net cash, valuation basis",
+   "value": 40.64,
+   "unit": "USD bn",
+   "period": "3 Sep 2026",
+   "source": "calc:-{valuation.inputs.net_debt}"
+  },
+  {
+   "name": "Samsung HBM revenue share Q2 2026",
+   "value": 33,
+   "unit": "%",
+   "period": "Q2 2026",
+   "source": "dossier:figures.171.value"
+  },
+  {
+   "name": "Samsung HBM revenue share Q1 2026",
+   "value": 21,
+   "unit": "%",
+   "period": "Q1 2026",
+   "source": "dossier:figures.173.value"
+  },
+  {
+   "name": "SK hynix HBM revenue share Q2 2026",
+   "value": 50,
+   "unit": "%",
+   "period": "Q2 2026",
+   "source": "dossier:figures.170.value"
+  },
+  {
+   "name": "Micron HBM revenue share Q2 2026",
+   "value": 18,
+   "unit": "%",
+   "period": "Q2 2026",
+   "source": "dossier:figures.172.value"
+  },
+  {
+   "name": "CXMT share of DRAM revenue",
+   "value": 10,
+   "unit": "%",
+   "period": "Q2 2026",
+   "source": "dossier:figures.175.value"
+  },
+  {
+   "name": "Data-centre share of FY2026 revenue (approximate)",
+   "value": 60,
+   "unit": "%",
+   "period": "FY2026",
+   "source": "dossier:figures.37.value"
+  },
+  {
+   "name": "Top-ten customers share of revenue (approximate)",
+   "value": 50,
+   "unit": "%",
+   "period": "FY2026",
+   "source": "dossier:figures.38.value"
+  },
+  {
+   "name": "One-day share fall, 5 Nov 2026",
+   "value": -17.46,
+   "unit": "%",
+   "period": "5 Nov 2026",
+   "source": "dossier:figures.167.value"
+  },
+  {
+   "name": "One-year volatility",
+   "value": 82.99,
+   "unit": "%",
+   "period": "1y",
+   "source": "facts:market.vol_1y"
+  },
+  {
+   "name": "Peak close, 25 Jun 2026",
+   "value": 1213.56,
+   "unit": "USD",
+   "period": "25 Jun 2026",
+   "source": "dossier:figures.169.value"
+  },
+  {
+   "name": "Taiwan share of Micron DRAM output (approximate)",
+   "value": 60,
+   "unit": "%",
+   "period": "2026",
+   "source": "dossier:figures.176.value"
+  },
+  {
+   "name": "Fab 11E budget, upper end",
+   "value": 4.5,
+   "unit": "USD bn",
+   "period": "2026",
+   "source": "dossier:figures.178.value"
+  },
+  {
+   "name": "Discount rate used in the valuation",
+   "value": 9.37,
+   "unit": "%",
+   "period": "valuation",
+   "source": "facts:valuation.inputs.discount_rate"
+  },
+  {
+   "name": "US 10-year yield",
+   "value": 4.867,
+   "unit": "%",
+   "period": "6 Nov 2026",
+   "source": "facts:macro.US10Y.latest"
+  },
+  {
+   "name": "US 10-year yield change in 12 months",
+   "value": 0.779,
+   "unit": "points",
+   "period": "12m",
+   "source": "facts:macro.US10Y.change_12m"
+  },
+  {
+   "name": "VIX",
+   "value": 25.64,
+   "unit": "points",
+   "period": "6 Nov 2026",
+   "source": "facts:macro.VIX.latest"
+  },
+  {
+   "name": "VIX change in 12 months",
+   "value": 6.14,
+   "unit": "points",
+   "period": "12m",
+   "source": "facts:macro.VIX.change_12m"
+  },
+  {
+   "name": "Micron stock fall May to Dec 2018 (Trefis)",
+   "value": 57,
+   "unit": "%",
+   "period": "2018",
+   "source": "https://www.trefis.com/stock/mu/articles/599100/micron-stock-surged-9x-but-history-suggests-caution/2026-05-12"
+  },
+  {
+   "name": "Micron peak price May 2018 (Trefis)",
+   "value": 64,
+   "unit": "USD",
+   "period": "May 2018",
+   "source": "https://www.trefis.com/stock/mu/articles/599100/micron-stock-surged-9x-but-history-suggests-caution/2026-05-12"
+  },
+  {
+   "name": "Micron price at end of 2018 (Trefis)",
+   "value": 28,
+   "unit": "USD",
+   "period": "Dec 2018",
+   "source": "https://www.trefis.com/stock/mu/articles/599100/micron-stock-surged-9x-but-history-suggests-caution/2026-05-12"
+  },
+  {
+   "name": "Micron forward P/E at the May 2018 peak (Trefis)",
+   "value": 4.5,
+   "unit": "x",
+   "period": "May 2018",
+   "source": "https://www.trefis.com/stock/mu/articles/599100/micron-stock-surged-9x-but-history-suggests-caution/2026-05-12"
+  },
+  {
+   "name": "Memory stock peak-to-trough fall, low end (uncoveralpha)",
+   "value": 60,
+   "unit": "%",
+   "period": "past cycles",
+   "source": "https://www.uncoveralpha.com/p/every-memory-cycle-ends-the-same"
+  },
+  {
+   "name": "Memory stock peak-to-trough fall, high end (uncoveralpha)",
+   "value": 80,
+   "unit": "%",
+   "period": "past cycles",
+   "source": "https://www.uncoveralpha.com/p/every-memory-cycle-ends-the-same"
+  },
+  {
+   "name": "Elpida liabilities at bankruptcy",
+   "value": 448,
+   "unit": "local bn",
+   "period": "Feb 2012",
+   "source": "https://phys.org/news/2012-03-japan-elpida-delisted-tokyo-stock.html"
+  },
+  {
+   "name": "Elpida liabilities at bankruptcy in USD (about)",
+   "value": 5.5,
+   "unit": "USD bn",
+   "period": "Feb 2012",
+   "source": "https://www.networkworld.com/article/706324/data-center-elpida-world-s-third-largest-dram-maker-files-for-bankruptcy.html"
+  },
+  {
+   "name": "Benchmark DDR3 2Gb price fall in 2011 (Wikipedia)",
+   "value": 85,
+   "unit": "%",
+   "period": "2011",
+   "source": "https://en.wikipedia.org/wiki/Micron_Memory_Japan"
+  }
+ ]
+}
