@@ -1,0 +1,2 @@
+time_london	agent	step	command	exit_code	message	fix
+2026-11-13T02:16:26+00:00	judge	2	python /workspace/skills/judge/scripts/judge_prep.py --run runs/2026-11-07-semis/run.yaml --cache /workspace/data-cache --key MU.US	0	run.yaml carries judge_prep: keep, so judge_prep.json was read as written on 2026-11-07T18:10 (recompute, macro values and price as of then) and not rebuilt; the script docstring says no research run carries the key	none: ruled on the kept prep, noted in judgement deviations

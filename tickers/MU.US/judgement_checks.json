@@ -1,0 +1,101 @@
+{
+ "key": "MU.US",
+ "pass": true,
+ "failures": [],
+ "claims_sha256": "b7049135259f63db6fec12120dfc69a0ae5cd2766b6f45cf198ccf550c1202c5",
+ "computed": {
+  "effective": {
+   "overrides": {},
+   "from_claims": [],
+   "total": 61.65,
+   "return_5y": 0.0746,
+   "price_lines_trading": {}
+  },
+  "conviction": 2,
+  "speculative": false,
+  "track": "B",
+  "base_weight_pct": 0.0,
+  "price_now": 690.0,
+  "current_zone": "suppressed: the high case's year-5 value is 3.6x the base case's (over 2.5x), so the zone depends on which case holds",
+  "zone_band": "",
+  "price_line_band": {},
+  "claims_supported": "0/3"
+ },
+ "run_id": "2026-11-07-semis",
+ "files": {
+  "judgement.json": "3c370cb78d52f81267104d759d1156468a45c2465c8ed7e31edec79605919e34",
+  "judge_prep.json": "47a2d072cbe28047b852f80023e1e0a4d71a7028139ba1597e9c947877300ed7",
+  "judgement.md": "1d8caf2f05ca9a42afe814b78f1d1fcbe9f010364d6f062c8b1323d3c986abef",
+  "claims.json": "b7049135259f63db6fec12120dfc69a0ae5cd2766b6f45cf198ccf550c1202c5",
+  "thesis.json": "f0d73815de7920fab2f2601952790709021b58bf363f1d9b2802e164f3f77f4d",
+  "dossier.json": "f0332539d0b0a1537b9d041ae051055c220a8c1636f6c8a548d503dcc98eb0d4",
+  "facts.json": "2661f89fb30a8af6599223e9f99a0f3c3368260ddc08c38659d0fd768b615f84",
+  "valuation.json": "a801a248cec591a3742d61885858697d5e5445479c1bf8bf1b97578e7d5ef014",
+  "redteam.json": "e8bdbcfe22b1083728fbb530ca4f3d16140e92fcd474e17efc80ed23c80f8763"
+ },
+ "verdict_row": {
+  "ticker": "MU.US",
+  "track": "B",
+  "thesis_total": "61.65",
+  "claims_supported": "0/3",
+  "judge_verdict": "watch",
+  "p_intact_12m": "0.9",
+  "conviction": "2",
+  "base_weight_pct": "0.0",
+  "kill_criteria": "C1: TTM operating margin below 46.28% at two consecutive quarter-ends before the August 2028 quarter's results: the margin would be fading faster than the code's own path and the price-band contracts would not have changed the cycle. | C2: TTM operating income below $85bn at two consecutive quarter-ends: FY2026's earnings would have been the peak and the cyclical fall not stopped by the contracts. | C3: TTM operating cash flow less capex below $26.49bn, the code's year-1 free cash flow to the firm, at two consecutive quarter-ends: the code's reinvestment charge would be right.",
+  "next_review": "2026-12-18",
+  "buy_below": "",
+  "full_size_below": "",
+  "trim_above": "",
+  "current_zone": "suppressed: the high case's year-5 value is 3.6x the base case's (over 2.5x), so the zone depends on which case holds",
+  "zone_band": ""
+ },
+ "ledger_entry": {
+  "line": 1,
+  "id": "954aa93c376359ca",
+  "sha256": "9e224ad8c86dcb84ec5b5d4f9a428868f4b7c44e6635f0d55f436669ea1921cf"
+ },
+ "attempts": [
+  {
+   "time_london": "2026-11-13T02:17:41+00:00",
+   "pass": true,
+   "failures": [],
+   "claims_sha256": "b7049135259f63db6fec12120dfc69a0ae5cd2766b6f45cf198ccf550c1202c5",
+   "verdict": "watch",
+   "run_id": "2026-11-07-semis",
+   "files": {
+    "judgement.json": "3c370cb78d52f81267104d759d1156468a45c2465c8ed7e31edec79605919e34",
+    "judge_prep.json": "47a2d072cbe28047b852f80023e1e0a4d71a7028139ba1597e9c947877300ed7",
+    "judgement.md": "1d8caf2f05ca9a42afe814b78f1d1fcbe9f010364d6f062c8b1323d3c986abef",
+    "claims.json": "b7049135259f63db6fec12120dfc69a0ae5cd2766b6f45cf198ccf550c1202c5",
+    "thesis.json": "f0d73815de7920fab2f2601952790709021b58bf363f1d9b2802e164f3f77f4d",
+    "dossier.json": "f0332539d0b0a1537b9d041ae051055c220a8c1636f6c8a548d503dcc98eb0d4",
+    "facts.json": "2661f89fb30a8af6599223e9f99a0f3c3368260ddc08c38659d0fd768b615f84",
+    "valuation.json": "a801a248cec591a3742d61885858697d5e5445479c1bf8bf1b97578e7d5ef014",
+    "redteam.json": "e8bdbcfe22b1083728fbb530ca4f3d16140e92fcd474e17efc80ed23c80f8763"
+   },
+   "verdict_row": {
+    "ticker": "MU.US",
+    "track": "B",
+    "thesis_total": "61.65",
+    "claims_supported": "0/3",
+    "judge_verdict": "watch",
+    "p_intact_12m": "0.9",
+    "conviction": "2",
+    "base_weight_pct": "0.0",
+    "kill_criteria": "C1: TTM operating margin below 46.28% at two consecutive quarter-ends before the August 2028 quarter's results: the margin would be fading faster than the code's own path and the price-band contracts would not have changed the cycle. | C2: TTM operating income below $85bn at two consecutive quarter-ends: FY2026's earnings would have been the peak and the cyclical fall not stopped by the contracts. | C3: TTM operating cash flow less capex below $26.49bn, the code's year-1 free cash flow to the firm, at two consecutive quarter-ends: the code's reinvestment charge would be right.",
+    "next_review": "2026-12-18",
+    "buy_below": "",
+    "full_size_below": "",
+    "trim_above": "",
+    "current_zone": "suppressed: the high case's year-5 value is 3.6x the base case's (over 2.5x), so the zone depends on which case holds",
+    "zone_band": ""
+   },
+   "ledger_entry": {
+    "line": 1,
+    "id": "954aa93c376359ca",
+    "sha256": "9e224ad8c86dcb84ec5b5d4f9a428868f4b7c44e6635f0d55f436669ea1921cf"
+   }
+  }
+ ]
+}
